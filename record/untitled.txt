@@ -1,0 +1,3 @@
+1. d2cl_create.ipynb和d2cl_gitdownload.ipynb： 发生在创造record文件夹前，需要移出或相应文件位置加../
+2. d2cl_create_ch1.ipynb：发生在我已经私自加了ch1/index.md时
+
