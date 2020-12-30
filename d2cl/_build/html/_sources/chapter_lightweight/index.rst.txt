@@ -1,6 +1,11 @@
 
 .. _chap_lightweight:
 
-Introduction
-============
+Lightweight
+===========
 
+
+.. toctree::
+   :maxdepth: 2
+
+   mobilenet

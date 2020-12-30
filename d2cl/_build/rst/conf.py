@@ -28,7 +28,7 @@ html_theme_options = {
     'primary_color': 'blue',
     'accent_color': 'deep_orange',
     'header_links': [
-        ('PDF', 'https://aieye-top.github.io/d2cl/d2cl.pdf', True, 'fas fa-file-pdf'),
+        ('PDF', 'https://aieye-top.github.io/d2cl/d2cl.pdf', True, 'fas fa-file-pdf'),('Github', 'https://github.com/aieye-top/d2cl', True, 'fab fa-github'),
     ],
     'show_footer': False
 }

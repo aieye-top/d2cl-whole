@@ -16,6 +16,8 @@
  * [7]: https://www.zhihu.com/question/58941804
 -->
 
+# MobileNet
+
 该网络将传统的卷积操作替换深度可分离卷积，即Depthwise卷积和Pointwise卷积的组合，相比传统的卷积操作，该组合可以大大节省参数量和计算量。与此同时，MobileNetV1也可以用于目标检测、图像分割等其他视觉任务中。[5]
 
 
@@ -52,7 +54,7 @@
 
 深度可分离卷积 分为 深度卷积和 点卷积
 
-![普通卷积vs深度可分离卷积](img\depth_sep.jpg)
+
 
 TODO:https://ai.deepshare.net/detail/v_5ee645312d94a_eMNJ5Jws/3?from=p_5ee641d2e8471_5z8XYfL6&type=6
 
@@ -270,7 +272,7 @@ class MobileNetV2(nn.Module):
 ```
 
 
-```
+```py
 #[5]
 import torch
 model = torch.hub.load('pytorch/vision:v0.6.0', 'mobilenet_v2', pretrained=True)
@@ -283,9 +285,7 @@ https://pytorch.org/tutorials/prototype/nnapi_mobilenetv2.html
 
 
 
-```py
-pip install --upgrade --pre --find-links https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html torch==1.8.0.dev20201106+cpu torchvision==0.9.0.dev20201107+cpu
-```
+
 
 
 這邊把各個Block多用一層Sequential包起來是因為Network Pruning的時候抓Layer比較方便。
