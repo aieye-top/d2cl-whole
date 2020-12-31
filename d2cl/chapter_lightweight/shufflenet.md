@@ -57,6 +57,9 @@ channel shuffle在工程实现占用大量内存和指针跳转，这部分很�
 channel shuffle的规则是人工设计，分组之间信息交流存在随意性，没有理论指导。
 
 
+The motivation of ShuffleNet is the fact that conv1x1 is the bottleneck of separable conv as mentioned above. While conv1x1 is already efficient and there seems to be no room for improvement, grouped conv1x1 can be used for this purpose!
+
+The above figure illustrates the module for ShuffleNet. The important building block here is the channel shuffle layer which “shuffles” the order of the channels among groups in grouped convolution. Without channel shuffle, the outputs of grouped convolutions are never exploited among groups, resulting in the degradation of accuracy.[7]
 
 
 
@@ -160,3 +163,4 @@ ShuffleNet和ResNet结构可知，ShuffleNet计算量降低主要是通过分组
 [4]: https://zhuanlan.zhihu.com/p/45496826
 [5]: https://cygao.xyz/2019/07/12/lightweight/
 [6]: https://towardsdatascience.com/review-shufflenet-v1-light-weight-model-image-classification-5b253dfe982f
+[7]: https://medium.com/@yu4u/why-mobilenet-and-its-variants-e-g-shufflenet-are-fast-1c7048b9618d

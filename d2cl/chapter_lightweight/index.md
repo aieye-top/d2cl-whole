@@ -7,5 +7,6 @@
 
 lightweight
 mobilenet
+mobilenet_v2
 shufflenet
 ```
