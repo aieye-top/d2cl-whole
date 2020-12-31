@@ -11,8 +11,10 @@ get_started
 ```toc
 :maxdepth: 2
 :numbered:
-        
+
 chapter_introduction/index
+chapter_write_code/index
 chapter_lightweight/index
+chapter_train/index
 
 ```
