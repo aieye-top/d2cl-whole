@@ -17,3 +17,4 @@ This is a demo to deploy on Github.
    chapter_write_code/index
    chapter_lightweight/index
    chapter_train/index
+   chapter_deploy/index
