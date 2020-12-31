@@ -29,10 +29,16 @@
 
 ### 模型压缩
 
-在数据编码上想办法：
+
+在数据编码上:
 
 1. 降低精度（ 32-bit 浮点数计算换成 16-bit 浮点数甚至 8-bit 定点数）
 2. 优化编码（原本的定点数是线性编码数字之间的间距相等，但是可以使用非线性编码在数字集中的地方使数字间的间距变小增加精度，而在数字较稀疏的地方使数字间距较大。效果：8-bit 非线性编码在合适的场合可以达到接近 16-bit 线性编码的精度
+
+知识蒸馏 Knowledge Distillation(KD)
+
+在一开始training的过程中比较庞杂，但是当后来需要拿去deploy的时候，可以转换成一个更小的模型。
+
 
 
 ### 网络修剪（network pruning）
@@ -40,3 +46,4 @@
 拿掉不活跃的神经元
 
 [1]: https://mp.weixin.qq.com/s/lO2UM04PfSM5VJYh6vINhw
+[2]: https://antkillerfarm.github.io/dl%20acceleration/2019/07/26/DL_acceleration_5.html
