@@ -6,6 +6,7 @@ Train
 
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   Server
+    Server
+    Active_Learning

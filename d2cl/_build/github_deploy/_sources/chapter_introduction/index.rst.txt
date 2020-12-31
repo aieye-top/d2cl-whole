@@ -4,3 +4,10 @@
 Introduction
 ============
 
+
+.. toctree::
+    :maxdepth: 2
+
+    time
+    IQ
+    money
