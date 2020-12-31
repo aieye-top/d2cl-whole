@@ -29,6 +29,8 @@
 
 ### 模型压缩
 
+压缩网络的前提是神经网络中的节点是有冗余的
+
 
 在数据编码上:
 
@@ -47,3 +49,4 @@
 
 [1]: https://mp.weixin.qq.com/s/lO2UM04PfSM5VJYh6vINhw
 [2]: https://antkillerfarm.github.io/dl%20acceleration/2019/07/26/DL_acceleration_5.html
+[3]: https://www.zhihu.com/question/50519680/answer/136406661

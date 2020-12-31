@@ -16,11 +16,33 @@ distill 压缩模型，利用大模型生成的类别概率作为soft targets，
 
 蒸馏的目标是让student学习到teacher的泛化能力，理论上得到的结果会比单纯拟合训练数据的student要好。另外，对于分类任务，如果soft targets的熵比hard targets高，那显然student会学习到更多的信息。
 
+## 什么是distillation (或者用Hinton的话说，dark knowledge）
+
+
 
 ## Transfer Set和Soft target
 
 实验证实，Soft target可以起到正则化的作用（不用soft target的时候需要early stopping，用soft target后稳定收敛）
 数据过少的话无法完整表达teacher学到的知识，需要增加无监督数据（用teacher的预测作为标签）或进行数据增强，可以使用的方法有：1.增加[MASK]，2.用相同POS标签的词替换，2.随机n-gram采样，具体步骤参考文献2
+
+由于有teacher network的存在，student network的训练也和普通的监督学习有所不同。
+
+论文：
+
+《Articulatory and Spectrum Features Integration using Generalized Distillation Framework》
+
+### Soft target
+
+hard target 包含的信息量（信息熵）很低，[11]
+soft target包含的信息量大，由于加入了关于想要拟合的mapping的prior knowledge，所以拥有不同类之间关系的信息；例子：2像3、2像7那学习的很好的大网络会给label“3”和“7”都有一定的概率值。[10]
+
+
+soft target的作用在于generalization。同dropout、L2 regularization、pre-train有相同作用。
+
+- dropout是阻碍神经网络学习过多训练集pattern的方法
+- L2 regularization是强制让神经网络的所有节点均摊变体的方法。
+- pretrain和soft target的方式比较接近，是加入prior knowledge，降低搜索空间的方法。
+
 
 ## 超参数T
 
@@ -59,6 +81,9 @@ loss是KL divergence，用来衡量两个分布之间距离。而KL divergence�
 [7]: Huawei -> TinyBERT: Distilling BERT for Natural Language Understanding https://arxiv.org/abs/1909.10351
 [8]: https://0809zheng.github.io/2020/05/01/network-compression.html
 [9]: https://www.zhihu.com/question/305220135/answer/552545851
+[10]: https://antkillerfarm.github.io/dl%20acceleration/2019/07/26/DL_acceleration_5.html
+[11]: https://www.zhihu.com/question/50519680/answer/136406661
+
 
 补充一些资源，还没仔细看：
 
