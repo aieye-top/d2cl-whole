@@ -43,9 +43,11 @@
 
 
 
-### 网络修剪（network pruning）
+### 减少特征图
 
-拿掉不活跃的神经元
+- 正则化（regularization）：修改目标函数/学习问题，所以优化后可能会得到一个参数较少的神经网络。参见 Louizos et al, (2018)
+- 网络修剪（network pruning）：拿掉不活跃的神经元
+- 增长（growing）：虽然这一方法传播得不够广泛，但是也可以采取这第三种方法，从小型网络开始，按某种增长标准逐步增加新的单元。参见「学界 | 为数据集自动生成神经网络：普林斯顿大学提出 NeST」
 
 [1]: https://mp.weixin.qq.com/s/lO2UM04PfSM5VJYh6vINhw
 [2]: https://antkillerfarm.github.io/dl%20acceleration/2019/07/26/DL_acceleration_5.html
