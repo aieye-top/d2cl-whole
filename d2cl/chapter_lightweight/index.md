@@ -6,6 +6,6 @@
 :maxdepth: 2
 
 lightweight
-mobilenets
-knowledge_distillation
+mobilenet
+shufflenet
 ```

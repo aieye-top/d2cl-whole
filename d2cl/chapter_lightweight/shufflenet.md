@@ -1,16 +1,3 @@
-
-
-<!--
- * @version:
- * @Author:  StevenJokess https://github.com/StevenJokess
- * @Date: 2020-10-16 20:56:49
- * @LastEditors:  StevenJokess https://github.com/StevenJokess
- * @LastEditTime: 2020-12-30 20:40:02
- * @Description:
- * @TODO::
- * @Reference:https://ai.deepshare.net/detail/v_5ee648f24314f_YkqkQu1q/3?from=p_5ee641d2e8471_5z8XYfL6&type=6
--->
-
 # ShuffleNet
 
 网络是Megvii Inc. (Face++)提出。ShuffleNet pursues the best accuracy in very limited computational budgets at tens or hundreds of MFLOPs
@@ -75,7 +62,7 @@ channel shuffle的规则是人工设计，分组之间信息交流存在随意�
 
 ## FLOPS
 
-![FLOPs](img\Shuffle_Flops.jp)
+![FLOPs] (img\Shuffle_Flops.jp)
 
 ```py
 import torch
