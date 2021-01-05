@@ -9,3 +9,4 @@ Write code
    :maxdepth: 2
 
    jupyter
+   API

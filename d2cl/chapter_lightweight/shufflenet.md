@@ -15,11 +15,11 @@ ResNet
 shufflenet v2
 pytorch复现
 
-# 动机
+## 动机
 
 数百层和数千通道，Billions of FLOPs
 
-# 方法
+## 方法
 
 属于直接训练而不是压缩
 

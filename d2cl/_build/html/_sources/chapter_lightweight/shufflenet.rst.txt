@@ -18,12 +18,12 @@ CNN 分组卷积 ResNet
 分组点卷积 通道重排 shufflenet v2 pytorch复现
 
 动机
-====
+----
 
 数百层和数千通道，Billions of FLOPs
 
 方法
-====
+----
 
 属于直接训练而不是压缩
 
@@ -68,6 +68,17 @@ Shuffle操作。
 
 channel shuffle在工程实现占用大量内存和指针跳转，这部分很耗时。 channel
 shuffle的规则是人工设计，分组之间信息交流存在随意性，没有理论指导。
+
+The motivation of ShuffleNet is the fact that conv1x1 is the bottleneck
+of separable conv as mentioned above. While conv1x1 is already efficient
+and there seems to be no room for improvement, grouped conv1x1 can be
+used for this purpose!
+
+The above figure illustrates the module for ShuffleNet. The important
+building block here is the channel shuffle layer which “shuffles” the
+order of the channels among groups in grouped convolution. Without
+channel shuffle, the outputs of grouped convolutions are never exploited
+among groups, resulting in the degradation of accuracy.[7]
 
 FLOPS
 -----
