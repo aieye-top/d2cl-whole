@@ -10,4 +10,8 @@ Lightweight
 
    lightweight
    mobilenet
+   mobilenet_v2
    shufflenet
+   compression
+   pruning
+   Knowledge-Distillation

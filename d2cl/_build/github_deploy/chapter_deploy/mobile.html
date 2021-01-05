@@ -22,6 +22,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/d2l.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="5.1. 芯片" href="hardware.html" /> 
@@ -113,9 +114,10 @@ Show Source
 <li class="toctree-l1"><a class="reference internal" href="../chapter_lightweight/index.html">3. Lightweight</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/lightweight.html">3.1. Lightweight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet.html">3.2. MobileNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html">3.3. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id1">3.4. 动机</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id2">3.5. 方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet_v2.html">3.3. MobileNet-v2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html">3.4. ShuffleNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id1">3.5. 动机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id2">3.6. 方法</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_train/index.html">4. Train</a><ul>
@@ -173,9 +175,10 @@ Show Source
 <li class="toctree-l1"><a class="reference internal" href="../chapter_lightweight/index.html">3. Lightweight</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/lightweight.html">3.1. Lightweight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet.html">3.2. MobileNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html">3.3. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id1">3.4. 动机</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id2">3.5. 方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet_v2.html">3.3. MobileNet-v2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html">3.4. ShuffleNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id1">3.5. 动机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id2">3.6. 方法</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_train/index.html">4. Train</a><ul>
@@ -227,8 +230,17 @@ short) is designed to allow framework interoperability.[2]</p>
 <p>Deploy</p>
 <p>Take the compressed flite file and load itinto a mobile or embedded
 device</p>
+<p>云端AI迁移到端侧A的四大理由:[3]</p>
+<ol class="arabic simple">
+<li><p>隐私和安全:当用户的数据禁止传出获取的地方时,如欧美隐私保护严格</p></li>
+<li><p>时延:当用户需要实时反馈时,比如机器人或自动驾驶车</p></li>
+<li><p>可靠性:与云端互联的网络可能不稳定、甚至断线</p></li>
+<li><p>能耗:频繁发送数据到云端耗费昂贵,占用频段资源</p></li>
+</ol>
 <p>[1]: [2]:
-<a class="reference external" href="https://course.fullstackdeeplearning.com/course-content/testing-and-deployment/hardware-mobile">https://course.fullstackdeeplearning.com/course-content/testing-and-deployment/hardware-mobile</a></p>
+<a class="reference external" href="https://course.fullstackdeeplearning.com/course-content/testing-and-deployment/hardware-mobile">https://course.fullstackdeeplearning.com/course-content/testing-and-deployment/hardware-mobile</a>
+[3]:
+<a class="reference external" href="https://www.bilibili.com/video/BV1Yt4y197Sd?from=search&amp;seid=16685409903707063286">https://www.bilibili.com/video/BV1Yt4y197Sd?from=search&amp;seid=16685409903707063286</a></p>
 </div>
 
 

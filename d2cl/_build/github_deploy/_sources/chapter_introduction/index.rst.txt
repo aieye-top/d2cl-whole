@@ -6,8 +6,9 @@ Introduction
 
 
 .. toctree::
-    :maxdepth: 2
+   :maxdepth: 2
 
-    time
-    IQ
-    money
+   time
+   IQ
+   privacy
+   money
