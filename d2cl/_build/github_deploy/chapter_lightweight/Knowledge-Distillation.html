@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <title>&lt;no title&gt; &#8212; Deploying Demo for d2cl 0.0.1 documentation</title>
+    <title>3.8. Knowledge-Distillation &#8212; Deploying Demo for d2cl 0.0.1 documentation</title>
 
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
@@ -26,7 +26,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. Train" href="../chapter_train/index.html" />
-    <link rel="prev" title="3.8. Pruning" href="pruning.html" /> 
+    <link rel="prev" title="3.7. Pruning" href="pruning.html" /> 
   </head>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
@@ -34,7 +34,7 @@
         
         <nav class="mdl-navigation breadcrumb">
             <a class="mdl-navigation__link" href="index.html"><span class="section-number">3. </span>Lightweight</a><i class="material-icons">navigate_next</i>
-            <a class="mdl-navigation__link is-active">&lt;no title&gt;</a>
+            <a class="mdl-navigation__link is-active"><span class="section-number">3.8. </span>Knowledge-Distillation</a>
         </nav>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
@@ -101,7 +101,7 @@ Show Source
                 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get_started.html">Getting Started</a></li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapter_introduction/index.html">1. Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/time.html">1.1. time</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/IQ.html">1.2. IQ</a></li>
@@ -113,20 +113,23 @@ Show Source
 <li class="toctree-l2"><a class="reference internal" href="../chapter_write_code/jupyter.html">2.1. Jupyter</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">3. Lightweight</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Lightweight</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="lightweight.html">3.1. Lightweight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mobilenet.html">3.2. MobileNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mobilenet_v2.html">3.3. MobileNet-v2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shufflenet.html">3.4. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#id1">3.5. 动机</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#id2">3.6. 方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compression.html">3.7. 针对生成模型的协同进化压缩算法(ICCV2019)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.8. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GhostNet.html">3.5. GhostNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compression.html">3.6. compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.7. Pruning</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.8. Knowledge-Distillation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_train/index.html">4. Train</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Server.html">4.1. Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Active_Learning.html">4.2. Active Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/pretrain.html">4.3. Pretrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/improve.html">4.4. 改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/structure.html">4.5. 结构</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_deploy/index.html">5. Deployment</a><ul>
@@ -167,7 +170,7 @@ Show Source
                 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get_started.html">Getting Started</a></li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapter_introduction/index.html">1. Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/time.html">1.1. time</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/IQ.html">1.2. IQ</a></li>
@@ -179,20 +182,23 @@ Show Source
 <li class="toctree-l2"><a class="reference internal" href="../chapter_write_code/jupyter.html">2.1. Jupyter</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">3. Lightweight</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Lightweight</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="lightweight.html">3.1. Lightweight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mobilenet.html">3.2. MobileNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mobilenet_v2.html">3.3. MobileNet-v2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shufflenet.html">3.4. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#id1">3.5. 动机</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#id2">3.6. 方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compression.html">3.7. 针对生成模型的协同进化压缩算法(ICCV2019)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.8. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GhostNet.html">3.5. GhostNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compression.html">3.6. compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.7. Pruning</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.8. Knowledge-Distillation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_train/index.html">4. Train</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Server.html">4.1. Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Active_Learning.html">4.2. Active Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/pretrain.html">4.3. Pretrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/improve.html">4.4. 改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/structure.html">4.5. 结构</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_deploy/index.html">5. Deployment</a><ul>
@@ -213,8 +219,11 @@ Show Source
     <div class="document">
         <div class="page-content" role="main">
         
-  <p><a class="reference external" href="https://github.com/FLHonker/Awesome-Knowledge-Distillation">https://github.com/FLHonker/Awesome-Knowledge-Distillation</a></p>
+  <div class="section" id="knowledge-distillation">
+<h1><span class="section-number">3.8. </span>Knowledge-Distillation<a class="headerlink" href="#knowledge-distillation" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/FLHonker/Awesome-Knowledge-Distillation">https://github.com/FLHonker/Awesome-Knowledge-Distillation</a></p>
 <p><a class="reference external" href="https://github.com/peterliht/knowledge-distillation-pytorch">https://github.com/peterliht/knowledge-distillation-pytorch</a></p>
+</div>
 
 
         </div>
@@ -229,7 +238,7 @@ Show Source
          <i class="pagenation-arrow-L fas fa-arrow-left fa-lg"></i>
          <div class="pagenation-text">
             <span class="pagenation-direction">Previous</span>
-            <div>3.8. Pruning</div>
+            <div>3.7. Pruning</div>
          </div>
      </a>
      <a id="button-next" href="../chapter_train/index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">

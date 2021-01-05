@@ -18,12 +18,12 @@ CNN 分组卷积 ResNet
 分组点卷积 通道重排 shufflenet v2 pytorch复现
 
 动机
-====
+----
 
 数百层和数千通道，Billions of FLOPs
 
 方法
-====
+----
 
 属于直接训练而不是压缩
 

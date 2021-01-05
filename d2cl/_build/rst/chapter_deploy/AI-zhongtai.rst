@@ -9,7 +9,7 @@ AI 中台
 
 洞悉2020年AI产业新趋势，青年科学家们如是说
 
-.. figure:: img\ai-zhongtai.jpg
+.. figure:: img/ai-zhongtai.jpg
 
    图｜数据中台和 AI 中台的架构设计
 

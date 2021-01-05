@@ -117,15 +117,18 @@ Show Source
 <li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet.html">3.2. MobileNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet_v2.html">3.3. MobileNet-v2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html">3.4. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id1">3.5. 动机</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id2">3.6. 方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/compression.html">3.7. 针对生成模型的协同进化压缩算法(ICCV2019)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/pruning.html">3.8. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/GhostNet.html">3.5. GhostNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/compression.html">3.6. compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/pruning.html">3.7. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/Knowledge-Distillation.html">3.8. Knowledge-Distillation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_train/index.html">4. Train</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Server.html">4.1. Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Active_Learning.html">4.2. Active Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/pretrain.html">4.3. Pretrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/improve.html">4.4. 改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/structure.html">4.5. 结构</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Deployment</a><ul class="current">
@@ -183,15 +186,18 @@ Show Source
 <li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet.html">3.2. MobileNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet_v2.html">3.3. MobileNet-v2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html">3.4. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id1">3.5. 动机</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html#id2">3.6. 方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/compression.html">3.7. 针对生成模型的协同进化压缩算法(ICCV2019)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/pruning.html">3.8. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/GhostNet.html">3.5. GhostNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/compression.html">3.6. compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/pruning.html">3.7. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/Knowledge-Distillation.html">3.8. Knowledge-Distillation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_train/index.html">4. Train</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Server.html">4.1. Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Active_Learning.html">4.2. Active Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/pretrain.html">4.3. Pretrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/improve.html">4.4. 改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/structure.html">4.5. 结构</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Deployment</a><ul class="current">
@@ -219,7 +225,7 @@ Show Source
 <p>中台的本质就类似是一个公司内部的共享经济，公有的部分通过中台的开发来完成，其余多条的业务线共享中台的能力。让开发产品的人员只需要关心产品相关的算法设计，或者模型设计，而不太需要去关心数据是怎么存储的，数据特征怎么提取以及在什么地方训练等问题，这些问题都可以通过AI中台来进行开发管理。</p>
 <p>洞悉2020年AI产业新趋势，青年科学家们如是说</p>
 <div class="figure align-default" id="id1">
-<img alt="chapter_deploy/imgai-zhongtai.jpg" src="chapter_deploy/imgai-zhongtai.jpg" />
+<img alt="chapter_deploy/img/ai-zhongtai.jpg" src="chapter_deploy/img/ai-zhongtai.jpg" />
 <p class="caption"><span class="caption-number">Fig. 5.4.1 </span><span class="caption-text">图｜数据中台和 AI 中台的架构设计</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>图｜数据中台和 AI 中台的架构设计（来源：刘霁）</p>

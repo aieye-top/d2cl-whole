@@ -117,15 +117,18 @@ Show Source
 <li class="toctree-l2"><a class="reference internal" href="mobilenet.html">3.2. MobileNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mobilenet_v2.html">3.3. MobileNet-v2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shufflenet.html">3.4. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#id1">3.5. 动机</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#id2">3.6. 方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compression.html">3.7. 针对生成模型的协同进化压缩算法(ICCV2019)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.8. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GhostNet.html">3.5. GhostNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compression.html">3.6. compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.7. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Knowledge-Distillation.html">3.8. Knowledge-Distillation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_train/index.html">4. Train</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Server.html">4.1. Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Active_Learning.html">4.2. Active Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/pretrain.html">4.3. Pretrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/improve.html">4.4. 改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/structure.html">4.5. 结构</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_deploy/index.html">5. Deployment</a><ul>
@@ -183,15 +186,18 @@ Show Source
 <li class="toctree-l2"><a class="reference internal" href="mobilenet.html">3.2. MobileNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mobilenet_v2.html">3.3. MobileNet-v2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shufflenet.html">3.4. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#id1">3.5. 动机</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#id2">3.6. 方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compression.html">3.7. 针对生成模型的协同进化压缩算法(ICCV2019)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.8. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GhostNet.html">3.5. GhostNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compression.html">3.6. compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.7. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Knowledge-Distillation.html">3.8. Knowledge-Distillation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_train/index.html">4. Train</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Server.html">4.1. Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Active_Learning.html">4.2. Active Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/pretrain.html">4.3. Pretrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/improve.html">4.4. 改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/structure.html">4.5. 结构</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_deploy/index.html">5. Deployment</a><ul>
@@ -231,20 +237,25 @@ Show Source
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mobilenet_v2.html">3.3. MobileNet-v2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shufflenet.html">3.4. ShuffleNet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shufflenet.html#id1">3.5. 动机</a></li>
-<li class="toctree-l1"><a class="reference internal" href="shufflenet.html#id2">3.6. 方法</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#group-convolutions">3.6.1. 分组点卷积Group convolutions`</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#channel-shuffle">3.6.2. 通道重排(channel shuffle)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#flops">3.6.3. FLOPS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#comparison-with-mobilenetv16">3.6.4. Comparison with MobileNetV16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shufflenet.html">3.4. ShuffleNet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#id1">3.4.1. 动机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#id2">3.4.2. 方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#group-convolutions">3.4.3. 分组点卷积Group convolutions`</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#channel-shuffle">3.4.4. 通道重排(channel shuffle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#flops">3.4.5. FLOPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shufflenet.html#comparison-with-mobilenetv16">3.4.6. Comparison with MobileNetV16</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="compression.html">3.7. 针对生成模型的协同进化压缩算法(ICCV2019)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pruning.html">3.8. Pruning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pruning.html#id1">3.8.1. 生成模型参数冗余建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GhostNet.html">3.5. GhostNet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compression.html">3.6. compression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="compression.html#iccv2019">3.6.1. 针对生成模型的协同进化压缩算法(ICCV2019)</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="pruning.html">3.7. Pruning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pruning.html#id1">3.7.1. 生成模型参数冗余建模</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Knowledge-Distillation.html">3.8. Knowledge-Distillation</a></li>
 </ul>
 </div>
 </div>

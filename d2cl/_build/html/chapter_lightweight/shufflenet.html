@@ -25,7 +25,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.7. 针对生成模型的协同进化压缩算法(ICCV2019)" href="compression.html" />
+    <link rel="next" title="3.5. GhostNet" href="GhostNet.html" />
     <link rel="prev" title="3.3. MobileNet-v2" href="mobilenet_v2.html" /> 
   </head>
 <body>
@@ -118,15 +118,18 @@ Show Source
 <li class="toctree-l2"><a class="reference internal" href="mobilenet.html">3.2. MobileNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mobilenet_v2.html">3.3. MobileNet-v2</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">3.4. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">3.5. 动机</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">3.6. 方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compression.html">3.7. 针对生成模型的协同进化压缩算法(ICCV2019)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.8. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GhostNet.html">3.5. GhostNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compression.html">3.6. compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.7. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Knowledge-Distillation.html">3.8. Knowledge-Distillation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_train/index.html">4. Train</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Server.html">4.1. Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Active_Learning.html">4.2. Active Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/pretrain.html">4.3. Pretrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/improve.html">4.4. 改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/structure.html">4.5. 结构</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_deploy/index.html">5. Deployment</a><ul>
@@ -184,15 +187,18 @@ Show Source
 <li class="toctree-l2"><a class="reference internal" href="mobilenet.html">3.2. MobileNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mobilenet_v2.html">3.3. MobileNet-v2</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">3.4. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">3.5. 动机</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">3.6. 方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compression.html">3.7. 针对生成模型的协同进化压缩算法(ICCV2019)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.8. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GhostNet.html">3.5. GhostNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compression.html">3.6. compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pruning.html">3.7. Pruning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Knowledge-Distillation.html">3.8. Knowledge-Distillation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_train/index.html">4. Train</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Server.html">4.1. Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_train/Active_Learning.html">4.2. Active Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/pretrain.html">4.3. Pretrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/improve.html">4.4. 改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_train/structure.html">4.5. 结构</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../chapter_deploy/index.html">5. Deployment</a><ul>
@@ -226,16 +232,16 @@ on ImageNet classification task, under the computation budget of 40
 MFLOPs.[2]</p>
 <p>CNN 分组卷积 ResNet</p>
 <p>分组点卷积 通道重排 shufflenet v2 pytorch复现</p>
-</div>
 <div class="section" id="id1">
-<h1><span class="section-number">3.5. </span>动机<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">3.4.1. </span>动机<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>数百层和数千通道，Billions of FLOPs</p>
 </div>
 <div class="section" id="id2">
-<h1><span class="section-number">3.6. </span>方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">3.4.2. </span>方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>属于直接训练而不是压缩</p>
+</div>
 <div class="section" id="group-convolutions">
-<h2><span class="section-number">3.6.1. </span>分组点卷积Group convolutions`<a class="headerlink" href="#group-convolutions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.3. </span>分组点卷积Group convolutions`<a class="headerlink" href="#group-convolutions" title="Permalink to this headline">¶</a></h2>
 <p>给点卷积也分组</p>
 <p>分组点卷积某个通道的输出仅来及一部分输入通道，阻止了信息流动，特征表示。</p>
 <p>Group convolutions are used in AlexNet and ResNeXt. (a): There is no
@@ -252,7 +258,7 @@ is also differentiable, which means it can be embedded into network
 structures for end-to-end training.[6]</p>
 </div>
 <div class="section" id="channel-shuffle">
-<h2><span class="section-number">3.6.2. </span>通道重排(channel shuffle)<a class="headerlink" href="#channel-shuffle" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.4. </span>通道重排(channel shuffle)<a class="headerlink" href="#channel-shuffle" title="Permalink to this headline">¶</a></h2>
 <p>如果我们允许组卷积从不同组中获取输入数据，则输入和输出通道讲完全相关。</p>
 <p>对于从上一个组层生成的特征图，可以先将每一个组中的通道划分为几个子组，
 然后在下一层中的每个组中使用不同的子组作为输入。</p>
@@ -277,7 +283,7 @@ channel shuffle, the outputs of grouped convolutions are never exploited
 among groups, resulting in the degradation of accuracy.[7]</p>
 </div>
 <div class="section" id="flops">
-<h2><span class="section-number">3.6.3. </span>FLOPS<a class="headerlink" href="#flops" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.5. </span>FLOPS<a class="headerlink" href="#flops" title="Permalink to this headline">¶</a></h2>
 <p><img alt="FLOPs" src="chapter_lightweight/#flops" /> (img:raw-latex:<cite>Shuffle</cite>_Flops.jp)</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
@@ -363,7 +369,7 @@ thus overall complexity will be roughly s² times of ShuffleNet 1×.</p></li>
 shuffle的规则是人工设计，分组之间信息交流存在随意性，没有理论指导。</p>
 </div>
 <div class="section" id="comparison-with-mobilenetv16">
-<h2><span class="section-number">3.6.4. </span>Comparison with MobileNetV1<a class="reference external" href="https://towardsdatascience.com/review-shufflenet-v1-light-weight-model-image-classification-5b253dfe982f">6</a><a class="headerlink" href="#comparison-with-mobilenetv16" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.6. </span>Comparison with MobileNetV1<a class="reference external" href="https://towardsdatascience.com/review-shufflenet-v1-light-weight-model-image-classification-5b253dfe982f">6</a><a class="headerlink" href="#comparison-with-mobilenetv16" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>ShuffleNet models are superior to MobileNetV1 for all the
 complexities.</p></li>
@@ -391,13 +397,13 @@ critical on low-cost architecture design.</p></li>
       <span class="caption-text">Table Of Contents</span>
     </p>
     <ul>
-<li><a class="reference internal" href="#">3.4. ShuffleNet</a></li>
-<li><a class="reference internal" href="#id1">3.5. 动机</a></li>
-<li><a class="reference internal" href="#id2">3.6. 方法</a><ul>
-<li><a class="reference internal" href="#group-convolutions">3.6.1. 分组点卷积Group convolutions`</a></li>
-<li><a class="reference internal" href="#channel-shuffle">3.6.2. 通道重排(channel shuffle)</a></li>
-<li><a class="reference internal" href="#flops">3.6.3. FLOPS</a></li>
-<li><a class="reference internal" href="#comparison-with-mobilenetv16">3.6.4. Comparison with MobileNetV16</a></li>
+<li><a class="reference internal" href="#">3.4. ShuffleNet</a><ul>
+<li><a class="reference internal" href="#id1">3.4.1. 动机</a></li>
+<li><a class="reference internal" href="#id2">3.4.2. 方法</a></li>
+<li><a class="reference internal" href="#group-convolutions">3.4.3. 分组点卷积Group convolutions`</a></li>
+<li><a class="reference internal" href="#channel-shuffle">3.4.4. 通道重排(channel shuffle)</a></li>
+<li><a class="reference internal" href="#flops">3.4.5. FLOPS</a></li>
+<li><a class="reference internal" href="#comparison-with-mobilenetv16">3.4.6. Comparison with MobileNetV16</a></li>
 </ul>
 </li>
 </ul>
@@ -415,11 +421,11 @@ critical on low-cost architecture design.</p></li>
             <div>3.3. MobileNet-v2</div>
          </div>
      </a>
-     <a id="button-next" href="compression.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
+     <a id="button-next" href="GhostNet.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
          <i class="pagenation-arrow-R fas fa-arrow-right fa-lg"></i>
         <div class="pagenation-text">
             <span class="pagenation-direction">Next</span>
-            <div>3.7. 针对生成模型的协同进化压缩算法(ICCV2019)</div>
+            <div>3.5. GhostNet</div>
         </div>
      </a>
   </div>
