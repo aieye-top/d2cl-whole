@@ -156,6 +156,21 @@ ShuffleNet和ResNet结构可知，ShuffleNet计算量降低主要是通过分组
 - ShuffleNets with SE modules boosting the top-1 error of ShuffleNet 2× to 24.7%, but are usually 25 to 40% slower than the “raw” ShuffleNets on mobile devices, which implies that actual speedup evaluation is critical on low-cost architecture design.
 
 
+它在移动端低功耗设备提出了一种更为高效的卷积模型结构，在大幅降低模型计算复杂度的同时仍然保持了较高的识别精度，并在多个性能指标上均显著超过了同类方法。[9]
+　　ShuffleNet Series涵盖以下6个模型：
+　　（1） ShuffleNetV1: ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices
+　　论文链接：https://arxiv.org/abs/1707.01083
+　　解读链接：为移动 AI 而生——旷视最新成果 ShuffleNet 全面解读
+　　（2） ShuffleNetV2: ShuffleNet V2: Practical Guidelines for Efficient CNN Architecture Design
+　　论文链接：https://arxiv.org/abs/1807.11164
+　　解读链接：ECCV 2018 | 旷视提出新型轻量架构ShuffleNet V2：从理论复杂度到实用设计准则
+　　（3） ShuffleNetV2+: ShuffleNetV2 的增强版
+　　（4） ShuffleNetV2.Large: ShuffleNetV2 的深化版
+　　（5） OneShot: Single Path One-Shot Neural Architecture Search with Uniform Sampling
+　　论文链接：https://arxiv.org/abs/1904.00420
+　　解读链接：AutoML | 旷视研究院提出One-Shot模型搜索框架的新变体
+　　（6） DetNAS: DetNAS: Backbone Search for Object Detection
+　　论文链接：https://arxiv.org/abs/1903.10979
 
 [1]: https://ai.deepshare.net/detail/v_5ee645312d94a_eMNJ5Jws/3?from=p_5ee641d2e8471_5z8XYfL6&type=6
 [2]: https://arxiv.org/abs/1707.01083
@@ -164,3 +179,5 @@ ShuffleNet和ResNet结构可知，ShuffleNet计算量降低主要是通过分组
 [5]: https://cygao.xyz/2019/07/12/lightweight/
 [6]: https://towardsdatascience.com/review-shufflenet-v1-light-weight-model-image-classification-5b253dfe982f
 [7]: https://medium.com/@yu4u/why-mobilenet-and-its-variants-e-g-shufflenet-are-fast-1c7048b9618d
+[8]: https://github.com/megvii-model/ShuffleNet-Series
+[9]: http://os.aiiaorg.cn/open/article/1201782277957726210
