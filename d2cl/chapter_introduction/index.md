@@ -6,5 +6,6 @@
 
 time
 IQ
+privacy
 money
 ```

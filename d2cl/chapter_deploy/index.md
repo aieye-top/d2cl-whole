@@ -6,4 +6,6 @@
 
 hardware
 mobile
+MCU
+AI-zhongtai
 ```
