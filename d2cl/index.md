@@ -20,8 +20,8 @@ get_started
 :numbered:
 
 chapter_introduction/index
-chapter_write_code/index
 chapter_lightweight/index
+chapter_write_code/index
 chapter_train/index
 chapter_deploy/index
 
