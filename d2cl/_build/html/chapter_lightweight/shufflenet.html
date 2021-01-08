@@ -104,7 +104,7 @@ Show Source
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapter_introduction/index.html">1. Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/time.html">1.1. time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/IQ.html">1.2. IQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/technology.html">1.2. 技术</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/privacy.html">1.3. 隐私</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/money.html">1.4. money</a></li>
 </ul>
@@ -174,7 +174,7 @@ Show Source
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../chapter_introduction/index.html">1. Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/time.html">1.1. time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/IQ.html">1.2. IQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/technology.html">1.2. 技术</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/privacy.html">1.3. 隐私</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/money.html">1.4. money</a></li>
 </ul>
@@ -370,8 +370,38 @@ thus overall complexity will be roughly s² times of ShuffleNet 1×.</p></li>
 2、channel
 shuffle的规则是人工设计，分组之间信息交流存在随意性，没有理论指导。</p>
 </div>
+<div class="section" id="shufflenet-v28">
+<h2><span class="section-number">3.4.6. </span>ShuffleNet-V2<a class="reference external" href="https://aistudio.baidu.com/aistudio/projectdetail/56879?channelType=0&amp;channel=0">8</a><a class="headerlink" href="#shufflenet-v28" title="Permalink to this headline">¶</a></h2>
+<p>由上图可以看到，相同FLOPs的两个模型,
+各部分的运行时间存在着明显的差异。这种不一致主要归结为两个原因: 1)
+影响速度的不仅仅是FLOPs，还有内存访问成本（Memory Access cost, MAC） ;
+2）模型的并行</p>
+<p>程度也会影响速度,
+并行度高的模型速度相对更快。因此作者结合理论与实践得到了四条实用的设计原则。
+1. 同等通道大小最小化内存访问成本一一使用1 <span class="math notranslate nohighlight">\(\times 1\)</span>
+卷积平衡输入和输出的通道大小 2.
+过量使用分组卷积会增加MAC一一分组卷积要谨慎实用, 注意分组数 3.
+网络碎片化会降低并行度, 一些网络如inception等倾向于采用“多路”结构,
+既存在一个block中有很多不同 的小卷积或pooling，这容易造成网络碎片化,
+降低并行度。一文避免网络碎片化 4.
+不能忽略元素级别的操作，例如ReLU和Add等操作，这些操作虽然FLOPs较小，但是MAC较大。——减少元素级运算</p>
+<p>(a): the basic ShuffleNet-V1 unit; (b) the ShuffleNet-V1 unit for
+spatial down sampling <span class="math notranslate nohighlight">\((2 \times) ;\)</span> (c) ShuffleNet-V2 basic unit;
+(d) ShuffleNet-V2 unit for spatial down sampling ( <span class="math notranslate nohighlight">\(2 \times\)</span> )</p>
+<p>ShuffleNet-V2 相对与V1，引入了一种新的运算: channel
+split。具体来说，在开始时先将输入特征图在通道
+维度分成两个分支：通道数分别为 <span class="math notranslate nohighlight">\(C^{\prime}\)</span> 和
+<span class="math notranslate nohighlight">\(C-C^{\prime},\)</span> 实际实现时 <span class="math notranslate nohighlight">\(C^{\prime}=C / 2\)</span>
+。左边分支做同等映射, 右边的 分支包含3个连续的卷积,
+并且输入和输出通道相同，这符合准则1。而且两个1x1卷积不再是组卷积, 这符合
+准则2，另外两个分支相当于已经分成两组。两个分支的输出不再是Add元素，而是concat在一起,
+紧接着是 对两个分支concat结果进行channle shuffle,
+以保证两个分支信息交流。其实concat和channel shuffle可以和
+下一个模块单元的channel
+split合成一个元素级运算，这符合准则4。整体网络结果如下表:</p>
+</div>
 <div class="section" id="comparison-with-mobilenetv16">
-<h2><span class="section-number">3.4.6. </span>Comparison with MobileNetV1<a class="reference external" href="https://towardsdatascience.com/review-shufflenet-v1-light-weight-model-image-classification-5b253dfe982f">6</a><a class="headerlink" href="#comparison-with-mobilenetv16" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.7. </span>Comparison with MobileNetV1<a class="reference external" href="https://towardsdatascience.com/review-shufflenet-v1-light-weight-model-image-classification-5b253dfe982f">6</a><a class="headerlink" href="#comparison-with-mobilenetv16" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>ShuffleNet models are superior to MobileNetV1 for all the
 complexities.</p></li>
@@ -405,7 +435,8 @@ critical on low-cost architecture design.</p></li>
 <li><a class="reference internal" href="#group-convolutions">3.4.3. 分组点卷积Group convolutions`</a></li>
 <li><a class="reference internal" href="#channel-shuffle">3.4.4. 通道重排(channel shuffle)</a></li>
 <li><a class="reference internal" href="#flops">3.4.5. FLOPS</a></li>
-<li><a class="reference internal" href="#comparison-with-mobilenetv16">3.4.6. Comparison with MobileNetV16</a></li>
+<li><a class="reference internal" href="#shufflenet-v28">3.4.6. ShuffleNet-V28</a></li>
+<li><a class="reference internal" href="#comparison-with-mobilenetv16">3.4.7. Comparison with MobileNetV16</a></li>
 </ul>
 </li>
 </ul>

@@ -5,7 +5,8 @@
 :maxdepth: 2
 
 time
-IQ
+technology
 privacy
 money
+
 ```
