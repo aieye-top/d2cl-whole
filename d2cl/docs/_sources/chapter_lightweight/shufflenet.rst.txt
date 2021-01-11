@@ -171,8 +171,8 @@ ShuffleNet和ResNet结构可知，ShuffleNet计算量降低主要是通过分组
 2、channel
 shuffle的规则是人工设计，分组之间信息交流存在随意性，没有理论指导。
 
-ShuffleNet-V2\ `8 <https://aistudio.baidu.com/aistudio/projectdetail/56879?channelType=0&channel=0>`__
-------------------------------------------------------------------------------------------------------
+ShuffleNet-V2\ `8 <https://github.com/megvii-model/ShuffleNet-Series>`__
+------------------------------------------------------------------------
 
 由上图可以看到，相同FLOPs的两个模型,
 各部分的运行时间存在着明显的差异。这种不一致主要归结为两个原因: 1)
@@ -221,3 +221,19 @@ Comparison with MobileNetV1\ `6 <https://towardsdatascience.com/review-shufflene
    to 24.7%, but are usually 25 to 40% slower than the “raw” ShuffleNets
    on mobile devices, which implies that actual speedup evaluation is
    critical on low-cost architecture design.
+
+它在移动端低功耗设备提出了一种更为高效的卷积模型结构，在大幅降低模型计算复杂度的同时仍然保持了较高的识别精度，并在多个性能指标上均显著超过了同类方法。\ `9 <http://os.aiiaorg.cn/open/article/1201782277957726210>`__
+　　ShuffleNet Series涵盖以下6个模型： 　　（1） ShuffleNetV1:
+ShuffleNet: An Extremely Efficient Convolutional Neural Network for
+Mobile Devices 　　论文链接：https://arxiv.org/abs/1707.01083
+　　解读链接：为移动 AI 而生——旷视最新成果 ShuffleNet 全面解读 　　（2）
+ShuffleNetV2: ShuffleNet V2: Practical Guidelines for Efficient CNN
+Architecture Design 　　论文链接：https://arxiv.org/abs/1807.11164
+　　解读链接：ECCV 2018 \| 旷视提出新型轻量架构ShuffleNet
+V2：从理论复杂度到实用设计准则 　　（3） ShuffleNetV2+: ShuffleNetV2
+的增强版 　　（4） ShuffleNetV2.Large: ShuffleNetV2 的深化版 　　（5）
+OneShot: Single Path One-Shot Neural Architecture Search with Uniform
+Sampling 　　论文链接：https://arxiv.org/abs/1904.00420
+　　解读链接：AutoML \| 旷视研究院提出One-Shot模型搜索框架的新变体
+　　（6） DetNAS: DetNAS: Backbone Search for Object Detection
+　　论文链接：https://arxiv.org/abs/1903.10979
