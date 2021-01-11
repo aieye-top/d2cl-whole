@@ -9,4 +9,5 @@ edge
 mobile
 MCU
 AI-zhongtai
+data
 ```

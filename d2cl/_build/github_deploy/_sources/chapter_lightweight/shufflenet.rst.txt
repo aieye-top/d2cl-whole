@@ -83,7 +83,7 @@ among groups, resulting in the degradation of accuracy.[7]
 FLOPS
 -----
 
-|FLOPs| (../img/Shuffle_Flops.jpg)
+|FLOPs| (img:raw-latex:`\Shuffle`\_Flops.jp)
 
 .. |FLOPs| image:: #flops
 
@@ -165,38 +165,11 @@ FLOPS
    s×” means scaling the number of filters in ShuffleNet 1× by s times
    thus overall complexity will be roughly s² times of ShuffleNet 1×.
 
-ShuffleNet也从宏观和微观两个层面分别对网络进行了优化。无独有偶，其瞄准的主要优化对象其实也是卷积核，ShuffleNet不仅采用了更小的卷积核，而且还采用了一种分组卷积的概念组合小型的卷积核，以求减少计算的复杂度。
-
 ShuffleNet和ResNet结构可知，ShuffleNet计算量降低主要是通过分组卷积实现。ShuffleNet虽然降低了计算量，但是引入两个新的问题：\ `4 <https://zhuanlan.zhihu.com/p/45496826>`__
 
 1、channel shuffle在工程实现占用大量内存和指针跳转，这部分很耗时。
 2、channel
 shuffle的规则是人工设计，分组之间信息交流存在随意性，没有理论指导。
-
-什么是分组
-----------
-
-所谓分组就是将输入与输出的通道分成几组，比如输出与输入的通道数都是4个且分成2组，那第1、2通道的输出只使用第1、2通道的输入，同样第3、4通道的输出只使用第3、4通道的输入。也就是说不同组之间的输入和输出之间完全没有了关系，减少联系势必减少计算量（有联系就说明要进行运算）。当然这种方式的副作用就是会损失信息，可能导致准确率下降
-
-计算量可减少多少
-~~~~~~~~~~~~~~~~
-
-在分组之前，每一层的参数数量是 :math:`N \times C \times H \times W`,
-如果将输入输出分成 :math:`g` 组，那么每一组的参数数量就会变成
-:math:`\frac{N \times C \times H \times W}{g}`
-个，虽然每层特征输出总数量
-依然不变，但是每一组自己运算的计算次数也会变成原来的
-:math:`\frac{1}{g},` 也就是说分组之后计算量可以降低到 原来的
-:math:`\frac{1}{g^{2}},` 而参数数量可以降低到原来的 :math:`\frac{1}{g}`
-。
-
-以上是单样本输入的情况，那么如果同时输入多个样本呢？
-如果是在内存资源充足的服务器端，我们 可以利用数据并行的思路,
-让k个样本多线程同时执行，速度自然可以提高K倍。但是在移动平台我
-们往往没有那么充足的内存资源, CPU也不支持太多线程同时执行,
-因此很有可能每个样本依然是独 立执行的，速度变化和单样本没有什么差距。
-
-不过这些都是理论分析，实际上移动平台的计算效率并不能提高如此之多，一方面卷积运算一般为了减少预算复杂度，都是先通过im2col转成向量，然后执行矩阵乘法，而im2col和矩阵运算时间其实相差无几，同时现代化的线性代数库都极大优化了矩阵运算性能，因此实际的性能提升肯定会受到影响。
 
 ShuffleNet-V2\ `8 <https://github.com/megvii-model/ShuffleNet-Series>`__
 ------------------------------------------------------------------------

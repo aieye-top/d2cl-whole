@@ -13,3 +13,4 @@ Deployment
    mobile
    MCU
    AI-zhongtai
+   data
