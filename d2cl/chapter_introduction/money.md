@@ -17,6 +17,8 @@
 
 像AlphaGoZero和GPT-3这样的大型现代网络需要数百万美元用于算力的训练[3]
 
+Sharir 等人选择 SOTA 模型之一 BERT 进行实验，结果发现根据所选模型的大小，完整训练过程的经济成本可能在 5 万到 160 万美元不等[4]
+
 ## 用预训练的小模型
 
 网络模型压缩[1]
@@ -39,3 +41,4 @@ Julian Togelius：但我们可以去尝试那些看起来完全讲不通的方�
 [1]: https://www.kancloud.cn/smartadpole/dl/662452
 [2]: https://www.jiqizhixin.com/articles/2019-06-30-5
 [3]: https://www.jiqizhixin.com/articles/2020-11-23-4
+[4]: https://www.jiqizhixin.com/articles/2020-12-12-5
