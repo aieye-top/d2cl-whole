@@ -51,7 +51,7 @@ jobs:
       #    mypy
 
 
-      - name: Documentation produce
-        run: |
-          d2lbook build html
-          cp -r _build/html/* docs/
+      # - name: Documentation produce
+      #   run: |
+      #     d2lbook build html
+      #     cp -r _build/html/* docs/
