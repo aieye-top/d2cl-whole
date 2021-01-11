@@ -1,6 +1,24 @@
 # Server
 
-一直使用 Google Colab 和 Kaggle Kernel 提供的免费 GPU（Tesla K80）训练模型（最近 Google 将 Colab 的 GPU 升级为 Tesla T4，计算速度又提升了一个档次），不过由于内地网络的原因，Google 和 Kaggle 连接十分不稳定，经常断线重连，一直是很令人头痛的问题，而且二者均有很多限制，例如 Google Colab 一个脚本运行的最长时间为 12h，Kaggle 的为 6h，数据集上传也存在问题，需要使用一些 Trick 才能达成目的，模型的保存、下载等都会耗费很多精力，总之体验不是很好[1]
+一直使用 Google Colab 和 Kaggle Kernel 提供的免费 GPU（Tesla K80）训练模型（最近 Google 将 Colab 的 GPU 升级为 Tesla T4，计算速度又提升了一个档次），不过由于内地网络的原因，Google 和 Kaggle 连接十分不稳定，经常断线重连，一直是很令人头痛的问题，而且二者均有很多限制，例如 Google Colab 一个脚本运行的最长时间为 12h，Kaggle 的为 6h，数据集上传也存在问题，需要使用一些 Trick 才能达成目的，模型的保存、下载等都会耗费很多精力，总之体验不是很好
+
+Google Colab, https://colab.research.google.com/
+
+从 Kaggle 上传数据的步骤[3]
+
+将「kaggle.json」文件保存在本地计算机上。
+
+安装 Kaggle 软件包：
+
+!pip install -q kaggle
+
+导入包：
+
+from google.colab import files
+
+上传本地文件「kaggle.json」：
+
+files.upload()
 
 ## DJL
 
@@ -10,3 +28,4 @@ DJL秉承了Java的座右铭：「Write once, run anywhere」，不依赖于具�
 
 [1]: https://www.guoyaohua.com/deeplearning-workstation.html#%E4%B8%BB%E6%9D%BF
 [2]: https://www.jiqizhixin.com/articles/2020-10-30-12
+[3]: https://www.jiqizhixin.com/articles/2020-11-16-11
