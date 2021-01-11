@@ -3,6 +3,7 @@
 
 
 ```{.python .input  n=1}
+import torch
 torch.hub.list('pytorch/vision')
 ```
 

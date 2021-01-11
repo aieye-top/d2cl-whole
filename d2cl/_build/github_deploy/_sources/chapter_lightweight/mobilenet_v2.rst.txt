@@ -1,17 +1,4 @@
 
-.. raw:: html
-
-   <!--
-    * @version:
-    * @Author:  StevenJokess https://github.com/StevenJokess
-    * @Date: 2020-11-13 22:01:00
-    * @LastEditors:  StevenJokess https://github.com/StevenJokess
-    * @LastEditTime: 2020-12-30 20:42:38
-    * @Description:
-    * @TODO::
-    * @Reference:
-   -->
-
 MobileNet-v2
 ============
 
@@ -32,6 +19,17 @@ architecture, the first conv1x1 increases the channel dimension, then
 depthwise conv is performed, and finally the last conv1x1 decreases the
 channel dimension.
 
+MobileNet的缺陷[10]
+-------------------
+
+MobileNet在微观结构上提出了深度级可分离卷积，以及所谓的DepthwiseConvolution，同时在网络结构上加入了BatchNorm层，并且还使用ReLU替代Sigmoid作为激活函数，但是相比后来出现的模型仍稍显乏力，这些改进到现在已经逐渐成为它的遗留问题。
+
+从宏观角度上来说，MobileNet的结构太过简单，和VGG一样，它依然是一个传统的直筒型结构。根据经验证明，这种结构在现在的工程实践中性价比不高。与VGG后来的ResNet、DenseNet等网络类似，这种网络是通过复用图像特征来提升网络的性价比的。MobileNet可以认为是轻量级网络中一种比较原始的结构。从微观角度上来说，Depthwise
+Convolution本身也存在问题。虽然Depthwise
+Convolution确实是大大降低了计算，而且N×N的DepthwiseConvolution和1×1的Pointwise
+Convolution组合在性能上也非常接近N×N的原始Convolution。但是在实际使用的过程中，根据经验会发现Depthwise
+Convolution训练出来的卷积核很容易变成全空的卷积核。这还不是致命的，致命的是ReLU对于0的输出的梯度为0，所以一旦陷入0输出，就无法恢复了。这个问题在定点化低精度训练的时候将会进一步放大。
+
 By reordering the building blocks as above and comparing it with
 MobileNet-v1 (separable conv), we can see how this architecture works
 (this reordering does not change the overall model architecture because
@@ -49,8 +47,30 @@ MobileNetV2是MobileNet的升级版，它具有两个特征点：
 design结构，在3x3网络结构前利用1x1卷积降维，在3x3网络结构后，利用1x1卷积升维，相比直接使用3x3网络卷积效果更好，参数更少，先进行压缩，再进行扩张。而在MobileNetV2网络部分，其采用Inverted
 residuals结构，在3x3网络结构前利用1x1卷积升维，在3x3网络结构后，利用1x1卷积降维，先进行扩张，再进行压缩。
 
+MobileNet
+v1的一个问题是没有很好地利用残差连接，而通常情况下残差连接属于比较好的神经元连接，所以MobileNet
+v2就加入了残差连接的思想。
+
+我们先来看看原始的残差块，原始的残差块的思想是先通过一个1×1的卷积核降通道，然后通过3×3的空间卷积提取特征，最后再通过1×1的卷积恢复通道，并和输入相加。这种形式是明显的两边宽（通道多），中间窄（通道少），这样做是因为3×3的空间卷积计算量太大，因此先使用1×1的卷积核降通道。
+
+由图6-8可以看出，我们先使用一个1×1的卷积核提升了输入的通道数，然后经过中间的多层Depthwise
+Convolution层，最后通过1×1的卷积核降低通道恢复原来的通道数。这样做是因为Depthwise
+Convolution层可以有效减少计算量，多个Depthwise
+Convolution组合在一起还可以得到更好的效果，虽然中间通道数多了，但是得益于Depthwise的计算量，整体计算量并不大。因此这种结构和原始的结构相反，是一种两边宽，中间窄的结构，通过较小的计算量得到了较好的性能。[11]
+
 2、Linear
 bottlenecks，为了避免Relu对特征的破坏，在在3x3网络结构前利用1x1卷积升维，在3x3网络结构后，再利用1x1卷积降维后，不再进行Relu6层，直接进行残差网络的加法。[6]
+
+MobileNet
+V2的第2个显著改进是去掉了ReLU6。首先说明一下ReLU6是MobileNet引入的，卷积之后通常会接一个ReLU实现非线性激活（替代Sigmoid），ReLU6就是普通的ReLU但是限制最大输出值为6，这是为了在移动平台设备float16/int8的低精度的时候，也能有很好的数值分辨率，如果对ReLU的激活范围不加限制，输出范围为0到正无穷，若激活值非常大，分布在一个很大的范围内，则低精度的float16/int8无法很好地精确描述如此大范围的数值，那么将会带来精度损失。而MobileNet
+V2去掉了最后输出的ReLU6，直接线性输出，这是因为ReLU变换后保留非0区域对应于一个线性变换，仅当输入低维时ReLU能保留所有完整信息。[11]
+
+网络结构
+--------
+
+我们就得到MobileNet V2的基本结构了，左边是MobileNet
+V1，没有ResidualConnection并且带最后的ReLU。右边是MobileNet
+V2，带Residual Connection，并且去掉了最后的ReLU
 
 .. code:: python
 

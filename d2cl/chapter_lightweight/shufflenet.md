@@ -65,7 +65,7 @@ The above figure illustrates the module for ShuffleNet. The important building b
 
 ## FLOPS
 
-![FLOPs] (img\Shuffle_Flops.jp)
+![FLOPs] (../img/Shuffle_Flops.jpg)
 
 ```py
 import torch

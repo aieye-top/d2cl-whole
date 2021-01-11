@@ -12,7 +12,7 @@ SqueezeNet可以说是最早公开的轻量级网络，是在非常著名的论�
 
 ## Background
 
-![AlexNet](img\AlexNet.jpg)
+![AlexNet](../img/AlexNet.jpg)
 
 AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size[3]
 
