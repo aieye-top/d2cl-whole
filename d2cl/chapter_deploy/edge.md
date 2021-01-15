@@ -71,6 +71,9 @@ https://github.com/kubeedge/kubeedge
 5. 协调如何将边缘智能平台内部基于OpenStack 的平台管理子系统进一步轻量化，并考虑将一些微服务架构迅速地引入边缘智能平台，从而降低管理开销。此外，边缘智能的商业运营模式、部署位置、自愈和自动扩缩容等问题仍需要得到进一步的明确和解决。
 
 
+https://github.com/StevenJokess/Awesome-System-for-Machine-Learning/blob/master/edge_system.md#edge-or-mobile-papers
+
+
 [1]: https://weread.qq.com/web/reader/eab32840721a4865eab660dka87322c014a87ff679a21ea
 [2]: https://weread.qq.com/web/reader/eab32840721a4865eab660dk16732dc0161679091c5aeb1
 [3]: https://weread.qq.com/web/reader/eab32840721a4865eab660dk8f132430178f14e45fce0f7

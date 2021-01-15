@@ -149,12 +149,18 @@ ShuffleNet和ResNet结构可知，ShuffleNet计算量降低主要是通过分组
 
 ## ShuffleNet-V2[8]
 
-由上图可以看到，相同FLOPs的两个模型, 各部分的运行时间存在着明显的差异。这种不一致主要归结为两个原因:
-1) 影响速度的不仅仅是FLOPs，还有内存访问成本（Memory Access cost, MAC） ;
-2）模型的并行
+《ShuffleNet V2: Practical Guidelines for Ecient CNN Architecture Design》
 
-程度也会影响速度, 并行度高的模型速度相对更快。因此作者结合理论与实践得到了四条实用的设计原则。
-1. 同等通道大小最小化内存访问成本一一使用1 $\times 1$ 卷积平衡输入和输出的通道大小
+影响神经网络速度的4个因素：
+
+1. FLOPs(FLOPs就是网络执行了多少multiply-adds操作)
+1. 影响速度的不仅仅是FLOPs，还有内存访问成本（Memory Access cost, MAC） ;
+1. 模型的并行（并行度高的模型速度相对更快。）
+1. 计算平台(GPU，ARM)
+
+因此作者结合理论与实践得到了四条实用的设计原则。
+
+1. 输入输出的channel相同时，最小化内存访问成本（MAC）一一使用1 $\times 1$ 卷积平衡输入和输出的通道大小
 2. 过量使用分组卷积会增加MAC一一分组卷积要谨慎实用, 注意分组数
 3. 网络碎片化会降低并行度, 一些网络如inception等倾向于采用"多路"结构, 既存在一个block中有很多不同 的小卷积或pooling，这容易造成网络碎片化, 降低并行度。一文避免网络碎片化
 4. 不能忽略元素级别的操作，例如ReLU和Add等操作，这些操作虽然FLOPs较小，但是MAC较大。——减少元素级运算

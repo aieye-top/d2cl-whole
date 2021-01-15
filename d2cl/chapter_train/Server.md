@@ -4,6 +4,11 @@
 
 Google Colab, https://colab.research.google.com/
 
+20种小技巧，玩转Google Colab:
+https://www.jiqizhixin.com/articles/2020-09-27-2
+
+https://amitness.com/vscode-on-colab/
+
 从 Kaggle 上传数据的步骤[3]
 
 将「kaggle.json」文件保存在本地计算机上。
