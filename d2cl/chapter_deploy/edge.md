@@ -2,6 +2,8 @@
 
 对5G+AI时代的新型算力平台（边缘计算）与网络连接（算力网络）进行了系统性的介绍。
 
+shi W等人[10]将“边缘”定义为数据源与云数据中心之间的任何计算资源和网络资源.对于其优势和必要性,Hu W等人[11]通过实验进行了相关验证,并通过实验证明移动设备盲目卸载计算任务到云可能导致更低的性能和更高的能耗.
+
 边缘计算的定义是：在靠近物或数据源头的网络边缘侧，融合网络、计算、存储、应用核心能力的分布式开放平台（架构），就近提供边缘智能服务，满足行业数字化在敏捷连接、实时业务、数据优化、应用智能、安全与隐私保护等方面的关键需求。它可以作为连接物理和数字世界的桥梁，使能智能资产、智能网关、智能系统和智能服务。
 
 边缘计算是在网络边缘提供计算、存储等资源，通过分布式的系统满足上层应用对时延等性能指标的要求，同时降低资源消耗，降低综合支出。因此边缘计算无法像传统云计算那样通过集中化、规模化管控，需要找到新的途径实现对离散资源的管控与资源互通，并实现网络资源和计算资源的协同调度，从而向用户提供有质量保证的服务。[1]
@@ -70,6 +72,8 @@ https://github.com/kubeedge/kubeedge
 4. 如何更好地引入人工智能，发挥边缘计算的整体优势有待研究。
 5. 协调如何将边缘智能平台内部基于OpenStack 的平台管理子系统进一步轻量化，并考虑将一些微服务架构迅速地引入边缘智能平台，从而降低管理开销。此外，边缘智能的商业运营模式、部署位置、自愈和自动扩缩容等问题仍需要得到进一步的明确和解决。
 
+然而,目前针对模型计算任务划分的研究相对较少,尝试针对基于深度神经网络的算法模型进行更细致的计算任务划分,结合边缘计算,解决深度学习技术在嵌入式领域应用性较差的问题[8]
+
 
 https://github.com/StevenJokess/Awesome-System-for-Machine-Learning/blob/master/edge_system.md#edge-or-mobile-papers
 
@@ -81,3 +85,8 @@ https://github.com/StevenJokess/Awesome-System-for-Machine-Learning/blob/master/
 [5]: https://www.jiqizhixin.com/articles/2020-10-10
 [6]: https://www.jiqizhixin.com/articles/2020-09-03-3
 [7]: https://tryolabs.com/blog/machine-learning-on-edge-devices-benchmark-report/
+[8]: http://www.jos.org.cn/jos/ch/reader/view_abstract.aspx?flag=1&file_no=5938&journal_id=jos
+
+
+[10]: Shi W, Fellow, IEEE, et al. Edge Computing: Vision and Challenges. IEEE Internet of Things Journal, 2016, 3(5):637-646.
+[11]: Hu W, Gao Y, Ha K, et al. Quantifying the impact of edge computing on mobile applications. Proceedings of the 7th ACM SIGOPS Asia-Pacific Workshop on Systems. ACM, 2016: 5
