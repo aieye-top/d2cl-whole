@@ -46,9 +46,12 @@ The important point here is that the bottleneck of the computational cost is now
 深度可分离卷积 设置两个超参数：balance准确率与延迟
 
 
-### Depthwise Separable convolutions
+### 深度可分离卷积 Depthwise Separable convolutions[11]
 
 MobileNet使用了一种称之为 Depthwise Separable convolutions来替代原有的传统3D卷积，减少了卷积核的冗余表达。在计算量和参数数量明显下降之后，卷积网络可以应用在更多的移动端平台。
+
+采用DW卷积在减少参数数量的同时提升运算速度。但是由于每个feature map只被一个卷积核卷积，因此经过DW输出的feature map不能只包含输入特征图的全部信息，而且特征之间的信息不能进行交流，导致“信息流通不畅”。
+采用PW卷积实现通道特征信息交流，解决DW卷积导致“信息流通不畅”的问题。
 
 
 
@@ -57,6 +60,9 @@ MobileNet使用了一种称之为 Depthwise Separable convolutions来替代原�
 通过步长来降采样
 (n+2p-f)/s + 1* (n+2p-f)/s + 1
 尺度维度变化
+
+用stride=2的卷积替换pooling
+直接在卷积时利用stride=2完成了下采样，从而节省了需要再去用pooling再去进行一次下采样的时间，可以提升运算速度。同时，因为pooling之前需要一个stride=1的 conv，而与stride=2 conv的计算量想比要高近4倍(个人理解)。
 
 ## 深度可分离卷积
 
@@ -348,5 +354,8 @@ The first version of the MobileNet architecture pioneered the use of depthwise c
 [8]: https://medium.com/@yu4u/why-mobilenet-and-its-variants-e-g-shufflenet-are-fast-1c7048b9618d
 [9]: https://zhuanlan.zhihu.com/c_1113861154916601856
 [10]: https://www.zhihu.com/people/wxa0be07b85b6e8e3e/posts?page=3
+[11]: https://leesen998.github.io/2018/01/15/%E7%AC%AC%E5%8D%81%E4%B8%83%E7%AB%A0_%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9%E3%80%81%E5%8A%A0%E9%80%9F%E5%8F%8A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%83%A8%E7%BD%B2/
 
-https://github.com/0809zheng/Hung-yi-Lee-ML2020-homework/blob/master/hw7_Network_Compression/hw7_Architecture_Design.ipynb
+
+https://github.com/0809zheng/Hung-yi-Lee-ML2020-homework/blob/master/
+hw7_Network_Compression/hw7_Architecture_Design.ipynb
