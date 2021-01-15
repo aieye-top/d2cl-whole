@@ -18,6 +18,15 @@
 
 整个思想中最大的难题在于如何有效地表达“知识”，并有效地指导小网络的训练。
 
+## 难点
+
+蒸馏"的难点在于如何缩减网络结构但保留有效信息,文中以 softmax分类为例子,T就是一个常量参数:
+
+$$\mathrm{f}\left(z_{k}\right)=e^{z_{k} / T}\left(\sum_{j} e^{z_{j} / T}\right)$$
+
+当T=1时,这就是 softmax的定义,当T>1,称之为soft softmax,T越大,因为zk产生的概率差异就会越小。
+文中提出这个方法用于生成软标签,然后将软标签和硬标签同时用于新网络的学习。当训练好一个模型之后,模型为所有的误标签都分配了很小的概率。然而实际上对于不同的错误标签,其被分配的概率仍然可能存在数个量级的悬殊差距。这个差距,在 softmax中直接就被忽略了,但这其实是一部分有用的信息。文章的做法是先利用 softmax loss训练获得一个大模型,然后基于大模型的 softmax输出结果获取每一类的概率,将这个概率,作为小模型训练时的标签,网络结构如上图。真实的损失函数包含了硬标签( nard labe)和软标签( soft labe)两部分。
+
 
 ## 背景
 
@@ -90,6 +99,10 @@ $$L_{total} =\lambda L_{orig}+（1-\lambda） L_{TS}$$
 
 由于softmax层的限制,知识蒸馏法被局限于分类任务的使用场景能应用于其他深度学习场景.在目标检测任务中,Li等人用[148]和[153]提出的方法,提升多分类目标检测网络的性能高隐层的神经元作为学习知识,其与类别输出概率信息量相同的做法,将在RGB数据集学习到的知识迁移到深度学习的场景中馏网络(PAD-Net)结构,产生一组中间辅助任务,为学习目标任务提供丰富的多模态数据2.7  混合方式以上这些压缩与加速方法单独使用时能起到很好效果补充.研究人员通过组合使用不同的压缩与加速方法或者针对不同网络层选取不同的压缩与加速方法体化的压缩与加速框架,能够获得更好的压缩比与加速效果合使用,极大降低模型的内存需求和存储需求,方便模型部署到计算资源有限的移动平台紧凑网络组合使用,为学生模型选择紧凑的网络结构够综合各类压缩与加速方法的优势,进一步加强压缩与加速效果的重要研究方向.2.7.1  组合参数剪枝和参数量化Ullrich等人[165]基于Soft  weight  sharing的正则化项在枝.Tung等人[166]提出参数剪枝和参数量化的一体化Pruning-Quantization(CLIP-Q).如图7所示,Han等人夫曼编码结合,达到很好的压缩效果,并在其基础上考虑到软硬件的协同压缩设计Engine(Eie)框架[168].Dubey等人[169]同样利用这三种方法的组合进行网络压缩Fig.7    Theflow chart of 图7    Deep Compression[13首先提出使用教师模型的类别概率输出计算soft target,为了方便计算还引入温度参将教师模型网络层之间的数据流信息作为学习信息,定义为两层特征的内积.Chen等人[155]将教师模型在某一类的不同样本间的排序关系作为学习信息传递给学生模型.将目标函数的导数融入到神经网络函数逼近器的训练中.当训,Lopes等人[157]提出如何通过extra  metadata解决.Zhou等人而是教师模型和学生模型同时训练；第二教师模型和学生模知识蒸馏法被局限于分类任务的使用场景.但近年来,研究人员提出多种策略使其等人[159]提出匹配proposal的方法,Chen等人[160]结合使提升多分类目标检测网络的性能.在解决人脸检测任务时,Luo等人[161]提出将更其与类别输出概率信息量相同,但更紧凑.Gupta等人[162]提出跨模态迁移知识数据集学习到的知识迁移到深度学习的场景中.Xu等人[163]提出一种多任务指导预测和蒸为学习目标任务提供丰富的多模态数据
 
+## Deep mutual learning则没有Teacher模型，它通过多个小模型进行协同训练
+
+Deep mutual learning则提出一种深度相互学习策略,在训练的过程中两个学生网络相互学习,每个网络都有两个损失。一个是任务本身的损失,另外一个就是KL散度。由于KL散度是非对称的,所以两个网络的散度会不同。
+
 
 [1]: 蒸馏开山鼻祖Hinton@NIPS2014：Distilling the Knowledge in a Neural Network https://arxiv.org/abs/1503.02531 Distilling the Knowledge in a Neural Network
 [2]: https://ai.deepshare.net/detail/v_5f164b66e4b0aebca61a59e3/3?from=p_5ee641d2e8471_5z8XYfL6&type=6
@@ -101,6 +114,8 @@ $$L_{total} =\lambda L_{orig}+（1-\lambda） L_{TS}$$
 [8]: https://0809zheng.github.io/2020/05/01/network-compression.html
 [9]: https://www.zhihu.com/question/305220135/answer/552545851
 [10]: https://www.hhyz.me/2018/06/26/ModelCompression/
+[11]: https://cloud.tencent.com/developer/article/1638510
+
 补充一些资源，还没仔细看：
 
 [dkozlov/awesome-knowledge-distillation](https://github.com/dkozlov/awesome-knowledge-distillation)
@@ -112,3 +127,11 @@ https://github.com/FLHonker/Awesome-Knowledge-Distillation
 
 https://github.com/peterliht/knowledge-distillation-pytorch
 https://github.com/AberHu/Knowledge-Distillation-Zoo
+
+
+https://cloud.tencent.com/developer/article/1680796
+BERT量化
+
+Q8BERT: Quantized 8Bit BERT
+
+Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT

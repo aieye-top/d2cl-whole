@@ -20,10 +20,22 @@
 
 从用户价值来看，一个好的生态是不应当让用户考虑「编译」这种过程的，因为它干扰了用户尝试新想法的流程，这在深度学习环境中显得尤为重要——用户执行的是算法，而不是程序。基于这个逻辑，XLA 在易用性方面是优于 TVM 的。当然，系统总是可以持续更新迭代的，低端设备用 AOT ，其他用 JIT 或许是一个可期的状态，且对用户透明。
 
+
+
+
 ## 问题
 
 首先以编译为核心存在一个重大的问题——可能只适用于 CPU 这类能使用 LLVM 作为后端代码生成的，或者支持 OpenCL 的 GPU 硬件设备，对于产业中不断涌现的以寒武纪 MLU 和 Google TPU 为代表的深度学习硬件加速器不太友好。[2]
 
+## More
+
+XLA（Accelerated Linear Algebra，加速线性代数）是一种优化TensorFlow计算的编译器。 XLA（加速线性代数）是为优化TensorFlow计算的特定领域编译器。它可以提高服务器和移动平台的速度、改进内存使用、提升便携性（或者说是可移植性）。 XLA框架是目前处于开发中的实验性项目。
+https://www.tensorflow.org/xla/overview
+
+Glow是一个机器学习的编译器和执行引擎，它可以面向多种硬件, 是基于LLVM项目进行了开发的。
+https://github.com/pytorch/glow
+
 [1]: https://cs.nju.edu.cn/lands/research4.html?0.9399114761232291
 [2]: https://jackwish.net/2018/on-android-nnapi.html
 [3]: https://jackwish.net/2019/on-deep-learning-system.html
+[4]: https://zhuanlan.zhihu.com/p/101544149s

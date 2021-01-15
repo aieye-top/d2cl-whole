@@ -57,6 +57,8 @@ $$q_{\text {int }}=\text { round }\left(\frac{x_{\text {float }}}{\text { scale 
 静态离线量化：此方式只需使用少量的样本数据进行模型的前向计算，对激活进行数值采样。使用饱和方式量化权重，非饱和方式量化激活。
 量化训练：此方式需要使用大量有标签样本数据。通过非饱和方式进行权重和激活的量化，并在训练过程中更新权重。
 
+在权重量化层面,Gupta 发现,使用 16 位的定点数作为权重,足够在 MNIST 上训练一个神经网络 .此外,Dettmers 研究了 8 位定点量化,加快并行训练中深度网络的收敛速度.Han 等人提出了结合权重剪枝,量化和霍夫编码的策略, 可以得到非常高的压缩比,但是这种方法需要专门的运算策略来实现.提出了二值权重网络(Binary Weight Network, BWN)即对于网络的权重而言,只有 1 或-1 两个值.BWN 采用了一种混合策略(BinaryConnect)对于网络的中间层特征,保留其原始精度,只将网络权重进行二值化,将网络前向传播与反向传播时的乘法操作变为加法操作.在网络的训练过程中,二值化的权重应用于前向传播与反向传播的梯度计算,而在更新权重时,采用全精度的权重,当全精度的权重越过阈值时,其对应的二值化后的权重就会发生改变.在测试时,只保留和使用二值化之后的权重,每个权重只占用一个 bit 的空间,对于 32 位或者 64 位 bit 的浮点数,有 32~64 倍的压缩倍率,并且由于用累加代替了乘法运算,使得网络的运行效率也大幅提升.[6]
+
 ## 工业界
 
 工业界最终选择了 INT8 量化—— FP32 在推理（inference）期间被 INT8 取代，而训练（training）仍然是 FP32。TensorRT，TensorFlow，PyTorch，MxNet 和许多其他深度学习软件都已启用（或正在启用）量化。[5]
@@ -76,3 +78,4 @@ https://jackwish.net/2019/neural-network-quantization-resources.html
 [3]: https://blog.csdn.net/Rocky6688/article/details/107252916
 [4]: https://cloud.tencent.com/developer/article/1657774
 [5]: https://jackwish.net/2019/neural-network-quantization-introduction-chn.html
+[6]: https://www.codenong.com/cs108925647/
