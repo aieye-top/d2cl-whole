@@ -2,14 +2,20 @@
 
 ## 博客
 
-Towards Data Science，以及 Medium
-
-https://ai.googleblog.com/
-
-https://deepmind.com/blog/?category=research
+- https://medium.com/
+- https://towardsdatascience.com/
+- https://ai.googleblog.com/
+- https://deepmind.com/blog/?category=research
 
 
 ## 论文
+
+### 顶级会议
+
+- NLP：ACL / NAACL / EMNLP ...
+- CV: CVPR / ICCV / ECCV ...
+- ML: ICML / ICLR / NIPS / AAAI ...
+- Data Mining & Information Retrieval: WWW / KDD / IJCAI ...
 
 ### arXiv
 
