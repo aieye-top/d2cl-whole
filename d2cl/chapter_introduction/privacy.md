@@ -13,8 +13,12 @@
 ## 侵犯隐私
 
 传输数据可能会侵犯隐私。数据可能被恶意的参与者截获，并且当数据存储在一个单一的位置（如云）时，其安全性就会降低。通过将数据保存在设备上并尽量减少通信，能够提高数据安全性和隐私性；
+ZAO应用的协议要求[3]用户献祭他的数据。
+
+DAFL: Data-Free Learningof Student Networks (ICCV 2019)[3]
 
 
 
 [1]: http://www.mittrchina.com/preview/news/4849
 [2]: https://www.jiqizhixin.com/articles/2020-11-02-7
+[3]:  模型压缩-工业界和学术界的差异 http://www.wangyunhe.site
