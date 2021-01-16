@@ -4,6 +4,8 @@
 
 Google Colab, https://colab.research.google.com/
 
+https://shell.cloud.google.com/?page=shell&show=ide%2Cterminal
+
 20种小技巧，玩转Google Colab:
 https://www.jiqizhixin.com/articles/2020-09-27-2
 

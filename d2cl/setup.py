@@ -17,6 +17,8 @@ setup(
     description="A Library for cheap deep Learning",
     author="StevenJokess",
     author_email="llgg8679@qq.com",
+    url='https://github.com/aieye-top/d2cl-whole',
+    keywords=['cheap', 'deep Learning'],
     python_requires=">=3.6",
     classifiers=[
         "Programming Language :: Python :: 3.6",
@@ -27,14 +29,15 @@ setup(
         exclude=["examples", "examples.*"]
     ),
     install_requires=[
-        "torch>=1.6.0"
+        'numpy',
+        "torch>=1.6.0",
+        'torchvision'
     ],
     extras_require={
         "dev": [
             "flake8",
             "mypy",
-            "d2lbook",
-            "sphinxcontrib-bibtex==1.0.0",
+            "d2lbook2",
         ],
     },
 )
