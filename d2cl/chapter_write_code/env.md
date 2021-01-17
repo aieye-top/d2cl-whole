@@ -10,4 +10,11 @@ https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 要使用显卡，必须安装NVIDIA Docker。
 
+Build GPU image (with nvidia-docker):[2]
+
+make docker-gpu
+
+
+
 [1]: https://cloud.tencent.com/developer/article/1471594
+[2]: https://stable-baselines.readthedocs.io/en/master/guide/install.html#openmpi
