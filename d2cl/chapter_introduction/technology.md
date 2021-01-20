@@ -23,6 +23,7 @@
 
 你用写项目申请书的方法写论文绝对被拒稿。（别人都做过了你这个研究的创新点在哪里呢？没有意义阿）[5]
 
+https://github.com/alirezadir/Production-Level-Deep-Learning
 
 [1]: http://www.myzaker.com/article/5fbfefd48e9f090f483d05b8
 [2]: https://www.zhihu.com/question/304599202/answer/792985951

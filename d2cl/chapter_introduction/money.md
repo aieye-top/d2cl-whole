@@ -2,6 +2,10 @@
 
 动辄几个亿的模型，普通人无力支持训练和运行大模型，怎么办？
 
+## 大真话
+
+投资人和创始人都认识到，人工智能不仅能开辟新的领域，而且能增加他们的预算。
+[5]
 ## 训练成本
 
 1. 语言模型
@@ -42,3 +46,4 @@ Julian Togelius：但我们可以去尝试那些看起来完全讲不通的方�
 [2]: https://www.jiqizhixin.com/articles/2019-06-30-5
 [3]: https://www.jiqizhixin.com/articles/2020-11-23-4
 [4]: https://www.jiqizhixin.com/articles/2020-12-12-5
+[5]: https://www.infoq.cn/article/qzMaLuvMz8NXX0j3koEd

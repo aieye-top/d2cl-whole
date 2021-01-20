@@ -1,5 +1,11 @@
 # 量化
 
+## 性能瓶颈
+
+对目前大多数深度学习任务而言，只要过了某个合理的阈值不够成性能瓶颈就行。[7]
+
+
+
 ## 定义
 
 参数量化是指用较低位宽表示典型的32位浮点网络参数,网络参数包括权重、激活值、梯度和误差等等,可以使用统一的位宽(如16-bit、8-bit、2-bit和1-bit等),也可以根据经验或一定策略自由组合不同的位宽.
@@ -79,3 +85,4 @@ https://jackwish.net/2019/neural-network-quantization-resources.html
 [4]: https://cloud.tencent.com/developer/article/1657774
 [5]: https://jackwish.net/2019/neural-network-quantization-introduction-chn.html
 [6]: https://www.codenong.com/cs108925647/
+[7]: http://mli.github.io/gpu/2016/01/17/build-gpu-clusters/

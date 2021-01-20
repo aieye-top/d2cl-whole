@@ -16,6 +16,8 @@ AI对数据的质量、规模和场景化方面的要求越来越高
 
 只要数据发生更改，就需要保存一个版本，这样才能保证能复现结果以及重复执行实验和训练模型。简单粗暴的版本控制（硬拷贝）具有很大的改进空间，不过尤其是在团队共享的情况下，能够保持不变的版本控制是至关重要的。
 
+https://github.com/iterative/dvc
+
 ## 有意义[5]
 
 专业的机器学习工程师会询问许多困难的问题来找出什么才是真正重要的领域，以及那些领域将如何对该应用程序输出结果产生影响。
@@ -37,9 +39,19 @@ AI对数据的质量、规模和场景化方面的要求越来越高
 
 大规模集群化。支持大规模集群化，提供金融级的高效、稳定、系统化的支撑。
 
+## 开源数据集
+
+https://tianchi.aliyun.com/dataset
+
+## d8 包
+
+d8是一个Python包，它允许你通过几行Python代码在各种机器学习框架中使用自己的数据集。它还提供了数百个内置的数据集，具有很大的多样性，以测试您的机器学习算法。[6]
+
+
 
 [1]: https://zhuanlan.zhihu.com/p/165087142
 [2]: https://www.jiqizhixin.com/articles/2020-09-03-3
 [3]: https://www.jiqizhixin.com/articles/2020-10-19-5
 [4]: https://www.jiqizhixin.com/articles/2019-08-17
 [5]: https://www.jiqizhixin.com/articles/2019-01-07-14
+[6]: http://preview.d2l.ai/d8/main/index.html
