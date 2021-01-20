@@ -22,6 +22,8 @@ https://github.com/iterative/dvc
 
 专业的机器学习工程师会询问许多困难的问题来找出什么才是真正重要的领域，以及那些领域将如何对该应用程序输出结果产生影响。
 
+数据本身是无限的，我们能够采集获取到的数据是非常有限和垂直的，我们不可能完全依据采集到的数据去做决策。对于目标的拆解的精细度，合理性也决定了机器决策无法可能是短视的，有偏见的等等。
+
 ## 特色[5]
 
 基于你们团队已经拥有的一部分知识之上进行拓展这个问题来找出；只有你们知道并理解的信息并以此创建一个独特的数据集。
@@ -48,6 +50,10 @@ https://tianchi.aliyun.com/dataset
 d8是一个Python包，它允许你通过几行Python代码在各种机器学习框架中使用自己的数据集。它还提供了数百个内置的数据集，具有很大的多样性，以测试您的机器学习算法。[6]
 
 
+## 人工干预
+
+如果完全依据数据决策，那在信息流平台上，有可能会看到非常多的低俗内容。人工干预仍是不可忽视的一部分。
+
 
 [1]: https://zhuanlan.zhihu.com/p/165087142
 [2]: https://www.jiqizhixin.com/articles/2020-09-03-3
@@ -55,3 +61,4 @@ d8是一个Python包，它允许你通过几行Python代码在各种机器学习
 [4]: https://www.jiqizhixin.com/articles/2019-08-17
 [5]: https://www.jiqizhixin.com/articles/2019-01-07-14
 [6]: http://preview.d2l.ai/d8/main/index.html
+[7]: https://www.infoq.cn/article/wvDLbIu4YXdkapa1JXNu

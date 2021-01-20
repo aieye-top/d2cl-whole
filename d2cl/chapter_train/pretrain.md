@@ -23,7 +23,7 @@ torch.hub.list('pytorch/vision')
 
 https://github.com/chsasank/pytorch-hub-model-zoo
 
-```{.python .input  n=2}
+```
 import torch
 from torchvision.models import mobilenet_v2
 

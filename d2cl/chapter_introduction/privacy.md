@@ -17,8 +17,11 @@ ZAO应用的协议要求[3]用户献祭他的数据。
 
 DAFL: Data-Free Learningof Student Networks (ICCV 2019)[3]
 
+对于必要的敏感数据，可以采取加密的方式进行传输，将数据变成不可解释性的形式，即使泄露了也不会带来风险。[4]
+
 
 
 [1]: http://www.mittrchina.com/preview/news/4849
 [2]: https://www.jiqizhixin.com/articles/2020-11-02-7
-[3]:  模型压缩-工业界和学术界的差异 http://www.wangyunhe.site
+[3]: 模型压缩-工业界和学术界的差异 http://www.wangyunhe.site
+[4]: https://www.infoq.cn/article/wvDLbIu4YXdkapa1JXNu
