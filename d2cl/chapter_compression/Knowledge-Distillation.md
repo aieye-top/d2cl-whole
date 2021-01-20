@@ -103,6 +103,8 @@ $$L_{total} =\lambda L_{orig}+（1-\lambda） L_{TS}$$
 
 Deep mutual learning则提出一种深度相互学习策略,在训练的过程中两个学生网络相互学习,每个网络都有两个损失。一个是任务本身的损失,另外一个就是KL散度。由于KL散度是非对称的,所以两个网络的散度会不同。
 
+知识蒸馏可以用于较小或中等大小的数据集，因为这样对学生和教师的 DNN 模型有较少的假设，从而有更高的准确度。[12]
+
 
 [1]: 蒸馏开山鼻祖Hinton@NIPS2014：Distilling the Knowledge in a Neural Network https://arxiv.org/abs/1503.02531 Distilling the Knowledge in a Neural Network
 [2]: https://ai.deepshare.net/detail/v_5f164b66e4b0aebca61a59e3/3?from=p_5ee641d2e8471_5z8XYfL6&type=6
@@ -115,6 +117,7 @@ Deep mutual learning则提出一种深度相互学习策略,在训练的过程�
 [9]: https://www.zhihu.com/question/305220135/answer/552545851
 [10]: https://www.hhyz.me/2018/06/26/ModelCompression/
 [11]: https://cloud.tencent.com/developer/article/1638510
+[12]: https://www.infoq.cn/article/Y8UuJHRTGvrZVKKPJFh2?utm_source=related_read_bottom&utm_medium=article
 
 补充一些资源，还没仔细看：
 
