@@ -12,12 +12,12 @@ def get_version() -> str:
 
 
 setup(
-    name="aieye",
+    name="d2cl",
     version=get_version(),
     description="A Library for cheap deep Learning",
     author="StevenJokess",
     author_email="llgg8679@qq.com",
-    url='https://github.com/aieye-top/d2cl-whole',
+    url='https://github.com/aieye-top/d2cl',
     keywords=['cheap', 'deep Learning'],
     python_requires=">=3.6",
     classifiers=[
