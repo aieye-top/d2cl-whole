@@ -33,11 +33,11 @@ setup(
         "torch>=1.6.0",
         'torchvision'
     ],
-    extras_require={
-        "dev": [
-            "flake8",
-            "mypy",
-            "d2lbook2 @ git+https://github.com/aieye-top/d2lbook2.git", # https://github.com/pypa/setuptools/issues/2048#issuecomment-605429013
-        ],
+    # extras_require={
+    #     "dev": [
+    #         "flake8",
+    #         "mypy",
+    #         "d2lbook2 @ git+https://github.com/aieye-top/d2lbook2.git", # https://github.com/pypa/setuptools/issues/2048#issuecomment-605429013
+    #     ],
     },
 )
