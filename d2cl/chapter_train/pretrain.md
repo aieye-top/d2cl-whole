@@ -23,7 +23,7 @@ torch.hub.list('pytorch/vision')
 
 https://github.com/chsasank/pytorch-hub-model-zoo
 
-```
+
 import torch
 from torchvision.models import mobilenet_v2
 
@@ -34,7 +34,7 @@ input_tensor = torch.rand(1,3,224,224)
 
 script_model = torch.jit.trace(model,input_tensor)
 script_model.save("mobilenet-v2.pt")
-```
+
 
 AI Hub 就更进一步：它允许你共享整个机器学习的管道，而不仅仅是模型！不过，它仍然处于 alpha 测试状态，但它已经比三年前修改最新文件的随机存储库更好了，如果你能够明白我意思的话。[4]
 https://aihub.cloud.google.com/
