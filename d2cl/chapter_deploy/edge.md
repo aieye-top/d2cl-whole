@@ -8,6 +8,14 @@ shi W等人[10]将“边缘”定义为数据源与云数据中心之间的任�
 
 边缘计算是在网络边缘提供计算、存储等资源，通过分布式的系统满足上层应用对时延等性能指标的要求，同时降低资源消耗，降低综合支出。因此边缘计算无法像传统云计算那样通过集中化、规模化管控，需要找到新的途径实现对离散资源的管控与资源互通，并实现网络资源和计算资源的协同调度，从而向用户提供有质量保证的服务。[1]
 
+## 端侧AI的优点[9]
+
+- 隐私性: 数据的存储计算等都在本地,避免了传到云端可能带来的数据安全问题。
+- 可靠性:  决策在本地大幅降低了数据经过更长的通路产生错误的几率。
+- 低延时: 数据的存储计算在本地处理、本地响应方面时间更短速度更快。
+- 高效率：选择性占用网络带宽资源,高效利用网络带宽,减少不必要流量,提升效率。
+- 个性化： 透过持续学习、模型调整和保护隐私的分布式学习,终端侧人工智能使设备具有与人类相似的理解能力和行为,给人们带来更个性化的互动与体验。
+
 ## 算力
 
 用于AI和图形处理的每秒浮点运算次数，FLOP/s），智能社会对算力的需求主要是浮点运算能力，专用AI芯片如华为昇腾910采用7nm工艺，半精度FP16算力达256TFLOP/s，低功耗的12nm芯片昇腾310半精度FP16算力也达到了8 TFLOP/s。过去5年，随着深度学习算法的演进，AI训练对算力的需求增加了30万倍，一些互联网厂家已经将算力作为服务提供给用户，从1 FP 32 TFLOP/s或8 FP 16 TFLOP/s到4FP 32 TFLOP/s或32 FP 16 TFLOP/s的AI推理加速服务，简单的语音语义识别或单流视频分析 8 FP16 TFLOP/s即可满足，复杂的推荐引擎或风险检测则需要32 FP 16 TFLOP/s的算力[2]
@@ -72,6 +80,7 @@ https://github.com/kubeedge/kubeedge
 4. 如何更好地引入人工智能，发挥边缘计算的整体优势有待研究。
 5. 协调如何将边缘智能平台内部基于OpenStack 的平台管理子系统进一步轻量化，并考虑将一些微服务架构迅速地引入边缘智能平台，从而降低管理开销。此外，边缘智能的商业运营模式、部署位置、自愈和自动扩缩容等问题仍需要得到进一步的明确和解决。
 
+![](img\tiaozhan.png)
 然而,目前针对模型计算任务划分的研究相对较少,尝试针对基于深度神经网络的算法模型进行更细致的计算任务划分,结合边缘计算,解决深度学习技术在嵌入式领域应用性较差的问题[8]
 
 
@@ -86,7 +95,7 @@ https://github.com/StevenJokess/Awesome-System-for-Machine-Learning/blob/master/
 [6]: https://www.jiqizhixin.com/articles/2020-09-03-3
 [7]: https://tryolabs.com/blog/machine-learning-on-edge-devices-benchmark-report/
 [8]: http://www.jos.org.cn/jos/ch/reader/view_abstract.aspx?flag=1&file_no=5938&journal_id=jos
-
+[9]: https://www.bilibili.com/video/BV14V411q7C2
 
 [10]: Shi W, Fellow, IEEE, et al. Edge Computing: Vision and Challenges. IEEE Internet of Things Journal, 2016, 3(5):637-646.
 [11]: Hu W, Gao Y, Ha K, et al. Quantifying the impact of edge computing on mobile applications. Proceedings of the 7th ACM SIGOPS Asia-Pacific Workshop on Systems. ACM, 2016: 5

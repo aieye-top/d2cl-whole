@@ -4,6 +4,7 @@ https://mp.weixin.qq.com/s/bndECrtEcNCkCF5EG0wO-A
 
 移动端机器学习资源合集
 
+
 Embedded and mobile frameworks are less fully featured than full PyTorch/Tensorflow
 Have to be careful with architecture
 Interchange format

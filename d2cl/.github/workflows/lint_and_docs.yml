@@ -1,14 +1,14 @@
 # This is a basic workflow to help you get started with Actions
 # Learn from https://github.com/thu-ml/tianshou/blob/master/.github/workflows/lint_and_docs.yml
-# TODO: Documentation test
+# # TODO: Documentation test
 
-name: PEP8, Types and Docs Check
+# name: PEP8, Types and Docs Check
 
-# Controls when the action will run.
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
+# # Controls when the action will run.
+# on:
+#   # Triggers the workflow on push or pull request events but only for the main branch
+#   push:
+#     branches: [ main ]
   # pull_request:
   #   branches: [ main ]
 

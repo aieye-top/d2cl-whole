@@ -35,6 +35,10 @@ AI模型的全生命周期长,包括数据接入、数据处理、特征工程�
 
 参数规模甚至到数十亿量级的全连接层参数规模的问题,人们转而考虑增加卷积层,使全连参数降低。随之带来的负面影响便增长了计算时间与能耗。[1]
 
+## 重复工作
+
+在部署机器学习模型的漫长道路上，超过四分之一 的企业都存在重复工作。[8]
+
 ## 实现
 
 实现过程中,有很无法直接实现,或者有找到简便的方法,不得不绕了个弯子,确实
@@ -45,7 +49,6 @@ AI模型的全生命周期长,包括数据接入、数据处理、特征工程�
 
 
 
-
 [1]: https://www.paperweekly.site/papers/notes/371
 [2]: https://www.sgpjbg.com/baogao/23268.html
 [3]: https://www.jiqizhixin.com/articles/2020-09-03-3
@@ -53,3 +56,4 @@ AI模型的全生命周期长,包括数据接入、数据处理、特征工程�
 [5]: http://www.atyun.com/49161.html
 [6]: http://www.atyun.com/35906.html
 [7]: https://www.infoq.cn/article/qzMaLuvMz8NXX0j3koEd
+[8]: https://www.infoq.cn/article/cjaNCk9BM4P6NQLxA154

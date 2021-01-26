@@ -37,6 +37,10 @@ DJL（Deep Java Library ）是亚马逊在2019年宣布推出的开源Java深度
 
 DJL秉承了Java的座右铭：「Write once, run anywhere」，不依赖于具体的引擎和深度学习框架，可以随时切换框架。原则上，基于DJL开发人员可以编写在任何引擎上运行的代码。DJL目前提供了MXNet,、PyTorch和TensorFlow的实现。DJL通过调用JNI或者JNA来调用相应的底层操作。DJL 编排管理基础设施，基于硬件配置来提供自动的 CPU/GPU 检测，以确保良好的运行效果。
 
+##
+
+https://dsw-dev.data.aliyun.com/
+
 [1]: https://www.guoyaohua.com/deeplearning-workstation.html#%E4%B8%BB%E6%9D%BF
 [2]: https://www.jiqizhixin.com/articles/2020-10-30-12
 [3]: https://www.jiqizhixin.com/articles/2020-11-16-11

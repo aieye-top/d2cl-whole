@@ -49,6 +49,9 @@ https://tianchi.aliyun.com/dataset
 
 d8是一个Python包，它允许你通过几行Python代码在各种机器学习框架中使用自己的数据集。它还提供了数百个内置的数据集，具有很大的多样性，以测试您的机器学习算法。[6]
 
+## 数据治理
+
+数据治理一直是 AI 落地的顽固阻力，过去，技术人员花了大量时间在整理数据、清洗数据、数据一致性等问题上，Sage AIOS 形成了叫“数据形式”的统一标准，其作用类似于 Windows 中的“文件格式”，它将 IT 知识、数据知识、业务知识等融合在一起，满足数据在一致性、时序性、闭环的要求，数据形式可大幅提升企业使用人工智能的应用效率。[8]
 
 ## 人工干预
 
@@ -62,3 +65,4 @@ d8是一个Python包，它允许你通过几行Python代码在各种机器学习
 [5]: https://www.jiqizhixin.com/articles/2019-01-07-14
 [6]: http://preview.d2l.ai/d8/main/index.html
 [7]: https://www.infoq.cn/article/wvDLbIu4YXdkapa1JXNu
+[8]: https://www.infoq.cn/article/aIZ4wbWiaMY3KMLmKhqK

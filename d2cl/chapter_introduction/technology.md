@@ -25,8 +25,24 @@
 
 https://github.com/alirezadir/Production-Level-Deep-Learning
 
+## 模型未投入生产
+
+据 VentureBeat 报道，大约 90% 的机器学习模型从未投入生产。换句话说，数据科学家的工作只有十分之一能够真正产出对公司有用的东西。[6]
+
+机器学习专家们把 90% 的时间都放在了数据准备、处理、特征工程、建模、调参上，而背后的业务问题和商业问题， 很多时候没有纳入严格的考虑。[7]
+
+## 版本控制和再现仍面临挑战
+
+到目前为止，机器学习模型版本控制还没有一种可行的方法。显然，数据科学家需要跟踪他们所做的任何更改，但现在这相当麻烦。
+
+此外，数据集可能会随时间漂移。随着公司和项目的发展，这是很自然的，但这使得再现过去的结果变得更加困难。
+
+更重要的是，一旦项目启动，就会建立一个基准，用于现在和将来对模型进行测试。结合版本控制，数据科学家可以再现他们的模型。[6]
+
 [1]: http://www.myzaker.com/article/5fbfefd48e9f090f483d05b8
 [2]: https://www.zhihu.com/question/304599202/answer/792985951
 [3]: https://www.zhihu.com/question/304599202/answer/549100318
 [4]: https://www.zhihu.com/question/304599202/answer/789358466
 [5]: http://www.atyun.com/35906.html
+[6]: https://www.infoq.cn/article/cjaNCk9BM4P6NQLxA154
+[7]: https://www.infoq.cn/article/2017/05/machine-expert-not-value?utm_source=related_read&utm_medium=article
