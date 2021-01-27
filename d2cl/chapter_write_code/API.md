@@ -50,5 +50,8 @@ HAL 接口是一组用 HAL Interface Definition Language（HIDL） 描述的接�
 Android Neural Networks API 包含一个 Runtime 。Android Neural Networks Runtime 的功能并不复杂，主要目的还是为了对接后端硬件。同时，考虑到硬件驱动在特定功能（例如某个新的神经网络算子）的可用性，Android Neural Networks Runtime 还包含了 CPU 回退（fallback）的功能——当不能使用专用设备计算时，依然可以保证基本的功能——这就像在图形系统中也可以用 CPU 模拟图形设备。Runtime 将在 Android Neural Networks API 内部结构等小节中继续介绍。
 
 
+PyTorch Cookbook（常用代码段整理合集） - 张皓的文章 - 知乎
+https://zhuanlan.zhihu.com/p/59205847
+
 [1]: https://www.sgpjbg.com/baogao/21424.html
 [2]: https://jackwish.net/2018/on-android-nnapi.html

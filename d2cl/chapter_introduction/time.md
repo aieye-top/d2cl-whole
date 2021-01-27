@@ -2,6 +2,8 @@
 
 人最多只有3万多天，该怎么活？
 
+开发时间，训练时间，部署时间，运行时间。[9]
+
 ## 生命周期长[2]
 
 时间：训练一个 CNN 或 RNN 通常需要数周的时间。这还不算上为了达到所需的性能表现，花在定义问题以及编程深度网络时迭代成败上的数周甚至数月的时间；
@@ -57,3 +59,4 @@ AI模型的全生命周期长,包括数据接入、数据处理、特征工程�
 [6]: http://www.atyun.com/35906.html
 [7]: https://www.infoq.cn/article/qzMaLuvMz8NXX0j3koEd
 [8]: https://www.infoq.cn/article/cjaNCk9BM4P6NQLxA154
+[9]: 有没有什么可以节省大量时间的 Deep Learning 效率神器？ - Lanking的回答 - 知乎 https://www.zhihu.com/question/384519338/answer/1202990734

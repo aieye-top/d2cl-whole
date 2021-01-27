@@ -44,6 +44,7 @@ https://github.com/iterative/dvc
 ## 开源数据集
 
 https://tianchi.aliyun.com/dataset
+https://ai.facebook.com/blog/a-new-open-data-set-for-multilingual-speech-research/
 
 ## d8 包
 
@@ -57,6 +58,9 @@ d8是一个Python包，它允许你通过几行Python代码在各种机器学习
 
 如果完全依据数据决策，那在信息流平台上，有可能会看到非常多的低俗内容。人工干预仍是不可忽视的一部分。
 
+## 语料库
+
+那当然是因为预训练选择的语料库非常重要！如同其他的迁移学习场景一样，如果预训练的数据源和你手头任务的数据相近，最后的性能当然会更好。举个栗子，受不同的语言风格影响，用维基百科的语料库预训练的模型在微博上的效果非常有限。
 
 [1]: https://zhuanlan.zhihu.com/p/165087142
 [2]: https://www.jiqizhixin.com/articles/2020-09-03-3
@@ -66,3 +70,4 @@ d8是一个Python包，它允许你通过几行Python代码在各种机器学习
 [6]: http://preview.d2l.ai/d8/main/index.html
 [7]: https://www.infoq.cn/article/wvDLbIu4YXdkapa1JXNu
 [8]: https://www.infoq.cn/article/aIZ4wbWiaMY3KMLmKhqK
+[9]: https://www.zhihu.com/people/astonz

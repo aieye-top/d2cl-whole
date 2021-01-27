@@ -8,4 +8,13 @@
 
 用法：https://blog.csdn.net/weixin_40641725/article/details/105512106
 
+全网最细 | 教你如何在 docker 容器下使用 mmdetection 训练自己的数据集 - 红色石头的文章 - 知乎
+https://zhuanlan.zhihu.com/p/101263456
+
+```bash
+sudo nvidia-docker run -it -p [host_port]:[container_port](do not use 8888) --name:[container_name] [image_name] -v [container_path]:[host_path] /bin/bash
+```
+[2]
+
 [1]: https://www.infoq.cn/article/lbF5cEOYhodd2roGPIT3
+[2]: PyCharm+Docker：打造最舒适的深度学习炼丹炉 - 刘震的文章 - 知乎 https://zhuanlan.zhihu.com/p/52827335

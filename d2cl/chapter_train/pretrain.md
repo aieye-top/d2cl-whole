@@ -49,6 +49,8 @@ https://github.com/topics/pretrained-language-model
 https://github.com/Separius/awesome-sentence-embedding
 https://gitee.com/mindspore/mindspore/tree/master/model_zoo/research/cv/tinynet
 
+https://nlp.gluon.ai/model_zoo/index.html
+
 [2]: https://github.com/johnolafenwa/PytorchMobile/blob/master/convert.py
 [3]: http://www.caict.ac.cn/kxyj/qwfb/bps/201810/P020181017317431141487.pdf
 [4]: https://www.infoq.cn/article/iQl1Qjir3Kb*9cowQcKW?utm_source=related_read&utm_medium=article

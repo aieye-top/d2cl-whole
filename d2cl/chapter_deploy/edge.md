@@ -86,6 +86,11 @@ https://github.com/kubeedge/kubeedge
 
 https://github.com/StevenJokess/Awesome-System-for-Machine-Learning/blob/master/edge_system.md#edge-or-mobile-papers
 
+## USB
+
+https://twitter.com/TensorFlow/status/1353764579034222593
+
+
 
 [1]: https://weread.qq.com/web/reader/eab32840721a4865eab660dka87322c014a87ff679a21ea
 [2]: https://weread.qq.com/web/reader/eab32840721a4865eab660dk16732dc0161679091c5aeb1

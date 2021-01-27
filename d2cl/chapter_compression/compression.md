@@ -146,6 +146,8 @@ DDPG Agent
 
 总结来讲，AMC用“Training算力”换取“Inference算力”的同时减少的对“人力“的依赖。最后，感谢Google Cloud AI对本项目的支持。
 
+https://github.com/PaddlePaddle/PaddleSlim
+
 
 [2]: https://weread.qq.com/web/reader/5a5326d0719ecf5f5a52e7ek0723244023c072b030ba601
 [3]: https://furui@phei.com.cn/module/goods/wssd_content.jsp?bookid=57454

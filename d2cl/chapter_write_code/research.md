@@ -17,6 +17,24 @@
 - ML: ICML / ICLR / NIPS / AAAI ...
 - Data Mining & Information Retrieval: WWW / KDD / IJCAI ...
 
+### Sci-Hub
+
+http://www.sci-hub.io/
+
+备用站点：http://www.sci-hub.cc/
+
+中国版以及备用站点：http://www.sci-hub.cn/、http://www.sci-hub.xyz/
+
+### 谷歌学术
+
+谷歌学术网址，http://scholar.glgoo.org/、https://xs.glgoo.net/、http://scholar.hedasudi.com/
+
+也有镜像网站合集http://www.dirmor.com/
+
+### Library Genesis
+
+Library Genesis号称是帮助全人类知识无版权传播的计划。网站上论文很多，下载方便，还有很多外文书籍和中文书籍，几乎每天都在更新。http://gen.lib.rus.ec/
+
 ### arXiv
 
 www.arxiv.org
@@ -49,6 +67,9 @@ metacademy看作一副机器学习和人工智能的知识图谱，在上面搜�
 
 https://openreview.net/
 
+CV领域Paper论文常见单词(一) - 王大东的文章 - 知乎
+https://zhuanlan.zhihu.com/p/58860096
+
 ## 代码
 
 ### Papers with Code[1]
@@ -67,9 +88,15 @@ Browse State-of-the-Art: https://paperswithcode.com/sota
 
 推荐网站：https://www.kaggle.com/
 
+## mathpix
+
+手写/截图 转 LaTex公式：https://mathpix.com/
+
+LaTex如果所有公式都要自己手打还是很痛苦的。（虽然很多时候一篇Deep Learning方向的paper公式数量只有十个左右（这还是在强行加上LSTM等被翻来覆去写烂的公式的情况下））
 
 
 [1]: https://www.jiqizhixin.com/articles/2020-10-09-5
 [2]: https://cloud.tencent.com/developer/article/1473703
 [3]: 有哪些可以自学机器学习、深度学习、人工智能的网站？ - 白小鱼的回答 - 知乎 https://www.zhihu.com/question/375537442/answer/1356785270
 [4]: 有哪些可以自学机器学习、深度学习、人工智能的网站？ - 鑫鑫淼淼焱焱的回答 - 知乎 https://www.zhihu.com/question/375537442/answer/1426414603
+[5]: 百度学术能否替代 Google 学术网站？有没有其他选择？ - 答答的回答 - 知乎 https://www.zhihu.com/question/24143504/answer/280410393
