@@ -16,10 +16,10 @@ https://github.com/onnx/models
 
 [TensorFlow hub](http://www.tensorflow.org/hub)为迁移学习(增量学习)提供前端模型支持、TensorFlow models 提供几十种常用模型 的官方支持和社区研究模型关注度非常高、TensorFlow Tensor2Tensor 提供从数据集到训练模型的全流程案例。PyTorch、MXNet、Keras、 Gluon、TensorLayer 各层次的平台也都从不同程度的提供主流模型算 法的直接支持，使得开发者可以快速的使用。
 
-```{.python .input  n=1}
+
 import torch
 torch.hub.list('pytorch/vision')
-```
+
 
 https://github.com/chsasank/pytorch-hub-model-zoo
 
