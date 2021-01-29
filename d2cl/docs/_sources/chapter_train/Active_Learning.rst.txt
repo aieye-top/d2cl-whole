@@ -9,3 +9,6 @@ Power），二是标记数据的数量。\ `1 <https://zhuanlan.zhihu.com/p/2701
 --------------------
 
 主动学习那些比较“难的”，“信息量大的”样本（hard mining）
+
+TODO: [2]: https://github.com/ej0cl6/deep-active-learning [3]:
+https://github.com/rmunro/pytorch_active_learning

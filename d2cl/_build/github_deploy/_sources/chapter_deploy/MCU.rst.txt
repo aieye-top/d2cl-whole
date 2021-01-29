@@ -16,6 +16,8 @@ MCUNet 进行学习推理所需要的内存可以减少为原来的
 
 http://tinyml.mit.edu/
 
+https://hanlab.mit.edu/projects/tinyml/tinyTL/
+
 MCUNet 实现 IoT 设备上的微型机器学习 一直以来，深度学习在 IoT
 微型设备上的运行难点在于，单片机的硬件资源限制。因为单片机的内存资源仅为手机、GPU
 的几千分之一，这导致原本在手机和 GPU 上能够完美运行的 AI
