@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <title>4.3. Pretrain &#8212; Dive into cheap deep learning 0.0.1 documentation</title>
+    <title>5.3. Pretrain &#8212; Dive into cheap deep learning 0.0.2 documentation</title>
 
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
@@ -25,16 +25,16 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.4. 改进" href="improve.html" />
-    <link rel="prev" title="4.2. Active Learning" href="Active_Learning.html" /> 
+    <link rel="next" title="5.4. 改进" href="improve.html" />
+    <link rel="prev" title="5.2. Active Learning" href="Active_Learning.html" /> 
   </head>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
     <div class="mdl-layout__header-row">
         
         <nav class="mdl-navigation breadcrumb">
-            <a class="mdl-navigation__link" href="index.html"><span class="section-number">4. </span>Train</a><i class="material-icons">navigate_next</i>
-            <a class="mdl-navigation__link is-active"><span class="section-number">4.3. </span>Pretrain</a>
+            <a class="mdl-navigation__link" href="index.html"><span class="section-number">5. </span>Train</a><i class="material-icons">navigate_next</i>
+            <a class="mdl-navigation__link is-active"><span class="section-number">5.3. </span>Pretrain</a>
         </nav>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
@@ -107,37 +107,44 @@ Show Source
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/technology.html">1.2. 技术</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/privacy.html">1.3. 隐私</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/money.html">1.4. money</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/data.html">1.5. Data</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapter_write_code/index.html">2. Write code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_write_code/jupyter.html">2.1. Jupyter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_write_code/API.html">2.2. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_lightweight/index.html">2. Lightweight</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/lightweight.html">2.1. Lightweight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/squeezenet.html">2.2. SqueezeNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet.html">2.3. MobileNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet_v2.html">2.4. MobileNet-v2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html">2.5. ShuffleNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/GhostNet.html">2.6. GhostNet</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapter_lightweight/index.html">3. Lightweight</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/lightweight.html">3.1. Lightweight</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet.html">3.2. MobileNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet_v2.html">3.3. MobileNet-v2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html">3.4. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/GhostNet.html">3.5. GhostNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/compression.html">3.6. compression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/pruning.html">3.7. Pruning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/Knowledge-Distillation.html">3.8. Knowledge-Distillation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_compression/index.html">3. Compression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_compression/compression.html">3.1. 模型压缩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_compression/pruning.html">3.2. 参数剪枝(Pruning)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_compression/Knowledge-Distillation.html">3.3. Knowledge-Distillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_compression/quantization.html">3.4. 量化</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Train</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Server.html">4.1. Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Active_Learning.html">4.2. Active Learning</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. Pretrain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="improve.html">4.4. 改进</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html">4.5. 结构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_write_code/index.html">4. Write code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_write_code/jupyter.html">4.1. Jupyter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_write_code/API.html">4.2. API</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapter_deploy/index.html">5. Deployment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/hardware.html">5.1. 芯片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/mobile.html">5.2. mobile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/MCU.html">5.3. MCU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/AI-zhongtai.html">5.4. AI 中台</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Train</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Server.html">5.1. Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Active_Learning.html">5.2. Active Learning</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. Pretrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="improve.html">5.4. 改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">5.5. 结构</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_deploy/index.html">6. Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/hardware.html">6.1. 芯片</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/edge.html">6.2. Edge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/mobile.html">6.3. mobile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/MCU.html">6.4. MCU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/AI-zhongtai.html">6.5. AI 中台</a></li>
 </ul>
 </li>
 </ul>
@@ -177,37 +184,44 @@ Show Source
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/technology.html">1.2. 技术</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/privacy.html">1.3. 隐私</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/money.html">1.4. money</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_introduction/data.html">1.5. Data</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapter_write_code/index.html">2. Write code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_write_code/jupyter.html">2.1. Jupyter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_write_code/API.html">2.2. API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_lightweight/index.html">2. Lightweight</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/lightweight.html">2.1. Lightweight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/squeezenet.html">2.2. SqueezeNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet.html">2.3. MobileNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet_v2.html">2.4. MobileNet-v2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html">2.5. ShuffleNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/GhostNet.html">2.6. GhostNet</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapter_lightweight/index.html">3. Lightweight</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/lightweight.html">3.1. Lightweight</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet.html">3.2. MobileNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/mobilenet_v2.html">3.3. MobileNet-v2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/shufflenet.html">3.4. ShuffleNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/GhostNet.html">3.5. GhostNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/compression.html">3.6. compression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/pruning.html">3.7. Pruning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_lightweight/Knowledge-Distillation.html">3.8. Knowledge-Distillation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_compression/index.html">3. Compression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_compression/compression.html">3.1. 模型压缩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_compression/pruning.html">3.2. 参数剪枝(Pruning)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_compression/Knowledge-Distillation.html">3.3. Knowledge-Distillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_compression/quantization.html">3.4. 量化</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Train</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Server.html">4.1. Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Active_Learning.html">4.2. Active Learning</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. Pretrain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="improve.html">4.4. 改进</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html">4.5. 结构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_write_code/index.html">4. Write code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_write_code/jupyter.html">4.1. Jupyter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_write_code/API.html">4.2. API</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chapter_deploy/index.html">5. Deployment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/hardware.html">5.1. 芯片</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/mobile.html">5.2. mobile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/MCU.html">5.3. MCU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/AI-zhongtai.html">5.4. AI 中台</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Train</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Server.html">5.1. Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Active_Learning.html">5.2. Active Learning</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. Pretrain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="improve.html">5.4. 改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">5.5. 结构</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter_deploy/index.html">6. Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/hardware.html">6.1. 芯片</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/edge.html">6.2. Edge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/mobile.html">6.3. mobile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/MCU.html">6.4. MCU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chapter_deploy/AI-zhongtai.html">6.5. AI 中台</a></li>
 </ul>
 </li>
 </ul>
@@ -222,63 +236,60 @@ Show Source
         <div class="page-content" role="main">
         
   <div class="section" id="pretrain">
-<h1><span class="section-number">4.3. </span>Pretrain<a class="headerlink" href="#pretrain" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
-<span class="n">torch</span><span class="o">.</span><span class="n">hub</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="s1">&#39;pytorch/vision&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="output highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Using</span> <span class="n">cache</span> <span class="n">found</span> <span class="ow">in</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">cache</span><span class="o">/</span><span class="n">torch</span><span class="o">/</span><span class="n">hub</span><span class="o">/</span><span class="n">pytorch_vision_master</span>
-</pre></div>
-</div>
-<div class="output highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;alexnet&#39;</span><span class="p">,</span>
- <span class="s1">&#39;deeplabv3_resnet101&#39;</span><span class="p">,</span>
- <span class="s1">&#39;deeplabv3_resnet50&#39;</span><span class="p">,</span>
- <span class="s1">&#39;densenet121&#39;</span><span class="p">,</span>
- <span class="s1">&#39;densenet161&#39;</span><span class="p">,</span>
- <span class="s1">&#39;densenet169&#39;</span><span class="p">,</span>
- <span class="s1">&#39;densenet201&#39;</span><span class="p">,</span>
- <span class="s1">&#39;fcn_resnet101&#39;</span><span class="p">,</span>
- <span class="s1">&#39;fcn_resnet50&#39;</span><span class="p">,</span>
- <span class="s1">&#39;googlenet&#39;</span><span class="p">,</span>
- <span class="s1">&#39;inception_v3&#39;</span><span class="p">,</span>
- <span class="s1">&#39;mnasnet0_5&#39;</span><span class="p">,</span>
- <span class="s1">&#39;mnasnet0_75&#39;</span><span class="p">,</span>
- <span class="s1">&#39;mnasnet1_0&#39;</span><span class="p">,</span>
- <span class="s1">&#39;mnasnet1_3&#39;</span><span class="p">,</span>
- <span class="s1">&#39;mobilenet_v2&#39;</span><span class="p">,</span>
- <span class="s1">&#39;resnet101&#39;</span><span class="p">,</span>
- <span class="s1">&#39;resnet152&#39;</span><span class="p">,</span>
- <span class="s1">&#39;resnet18&#39;</span><span class="p">,</span>
- <span class="s1">&#39;resnet34&#39;</span><span class="p">,</span>
- <span class="s1">&#39;resnet50&#39;</span><span class="p">,</span>
- <span class="s1">&#39;resnext101_32x8d&#39;</span><span class="p">,</span>
- <span class="s1">&#39;resnext50_32x4d&#39;</span><span class="p">,</span>
- <span class="s1">&#39;shufflenet_v2_x0_5&#39;</span><span class="p">,</span>
- <span class="s1">&#39;shufflenet_v2_x1_0&#39;</span><span class="p">,</span>
- <span class="s1">&#39;squeezenet1_0&#39;</span><span class="p">,</span>
- <span class="s1">&#39;squeezenet1_1&#39;</span><span class="p">,</span>
- <span class="s1">&#39;vgg11&#39;</span><span class="p">,</span>
- <span class="s1">&#39;vgg11_bn&#39;</span><span class="p">,</span>
- <span class="s1">&#39;vgg13&#39;</span><span class="p">,</span>
- <span class="s1">&#39;vgg13_bn&#39;</span><span class="p">,</span>
- <span class="s1">&#39;vgg16&#39;</span><span class="p">,</span>
- <span class="s1">&#39;vgg16_bn&#39;</span><span class="p">,</span>
- <span class="s1">&#39;vgg19&#39;</span><span class="p">,</span>
- <span class="s1">&#39;vgg19_bn&#39;</span><span class="p">,</span>
- <span class="s1">&#39;wide_resnet101_2&#39;</span><span class="p">,</span>
- <span class="s1">&#39;wide_resnet50_2&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
+<h1><span class="section-number">5.3. </span>Pretrain<a class="headerlink" href="#pretrain" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2><span class="section-number">5.3.1. </span>标准模型算法资源库<a class="reference external" href="http://www.caict.ac.cn/kxyj/qwfb/bps/201810/P020181017317431141487.pdf">3</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>各大主流 AI
+训练平台为了能吸引更多的开发者，不断推出和完善主流模型的直接调用能力，通常被称为
+Model Zoo。</p>
+<p><a class="reference external" href="https://modelzoo.co/">https://modelzoo.co/</a></p>
+<p><a class="reference external" href="https://github.com/PaddlePaddle/PaddleHub">https://github.com/PaddlePaddle/PaddleHub</a>
+<a class="reference external" href="https://github.com/PaddlePaddle/models">https://github.com/PaddlePaddle/models</a></p>
+<p>TensorFlow社区推出了一系列围绕 model 的项目， <a class="reference external" href="https://tfhub.dev/">https://tfhub.dev/</a>
+<a class="reference external" href="https://github.com/onnx/models">https://github.com/onnx/models</a></p>
+<p><a class="reference external" href="http://www.tensorflow.org/hub">TensorFlow
+hub</a>为迁移学习(增量学习)提供前端模型支持、TensorFlow
+models 提供几十种常用模型
+的官方支持和社区研究模型关注度非常高、TensorFlow Tensor2Tensor
+提供从数据集到训练模型的全流程案例。PyTorch、MXNet、Keras、
+Gluon、TensorLayer 各层次的平台也都从不同程度的提供主流模型算
+法的直接支持，使得开发者可以快速的使用。</p>
+<p>import torch torch.hub.list(‘pytorch/vision’)</p>
 <p><a class="reference external" href="https://github.com/chsasank/pytorch-hub-model-zoo">https://github.com/chsasank/pytorch-hub-model-zoo</a></p>
+<p>import torch from torchvision.models import mobilenet_v2</p>
+<p>model = mobilenet_v2(pretrained=True)</p>
+<p>model.eval() input_tensor = torch.rand(1,3,224,224)</p>
+<p>script_model = torch.jit.trace(model,input_tensor)
+script_model.save(“mobilenet-v2.pt”)</p>
+<p>AI Hub
+就更进一步：它允许你共享整个机器学习的管道，而不仅仅是模型！不过，它仍然处于
+alpha
+测试状态，但它已经比三年前修改最新文件的随机存储库更好了，如果你能够明白我意思的话。<a class="reference external" href="https://www.infoq.cn/article/iQl1Qjir3Kb*9cowQcKW?utm_source=related_read&amp;utm_medium=article">4</a>
+<a class="reference external" href="https://aihub.cloud.google.com/">https://aihub.cloud.google.com/</a></p>
 <hr class="docutils" />
 <p><a class="reference external" href="https://github.com/topics/pretrained-language-model">https://github.com/topics/pretrained-language-model</a>
-<a class="reference external" href="https://github.com/Separius/awesome-sentence-embedding">https://github.com/Separius/awesome-sentence-embedding</a></p>
+<a class="reference external" href="https://github.com/Separius/awesome-sentence-embedding">https://github.com/Separius/awesome-sentence-embedding</a>
+<a class="reference external" href="https://gitee.com/mindspore/mindspore/tree/master/model_zoo/research/cv/tinynet">https://gitee.com/mindspore/mindspore/tree/master/model_zoo/research/cv/tinynet</a></p>
+<p><a class="reference external" href="https://nlp.gluon.ai/model_zoo/index.html">https://nlp.gluon.ai/model_zoo/index.html</a></p>
+</div>
 </div>
 
 
         </div>
         <div class="side-doc-outline">
             <div class="side-doc-outline--content"> 
+<div class="localtoc">
+    <p class="caption">
+      <span class="caption-text">Table Of Contents</span>
+    </p>
+    <ul>
+<li><a class="reference internal" href="#">5.3. Pretrain</a><ul>
+<li><a class="reference internal" href="#id1">5.3.1. 标准模型算法资源库3</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
             </div>
         </div>
 
@@ -288,14 +299,14 @@ Show Source
          <i class="pagenation-arrow-L fas fa-arrow-left fa-lg"></i>
          <div class="pagenation-text">
             <span class="pagenation-direction">Previous</span>
-            <div>4.2. Active Learning</div>
+            <div>5.2. Active Learning</div>
          </div>
      </a>
      <a id="button-next" href="improve.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
          <i class="pagenation-arrow-R fas fa-arrow-right fa-lg"></i>
         <div class="pagenation-text">
             <span class="pagenation-direction">Next</span>
-            <div>4.4. 改进</div>
+            <div>5.4. 改进</div>
         </div>
      </a>
   </div>
